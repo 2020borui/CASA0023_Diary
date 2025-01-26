@@ -19,9 +19,11 @@ bibliography: references.bib
 format:
   html:
     theme: cosmo
+  pdf:
+    documentclass: scrreprt
 
 
 editor: visual
-output-dir: docs
-prefer-html: true
+output-dir: docs 
+
 
