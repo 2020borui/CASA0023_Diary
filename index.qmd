@@ -1,3 +1,9 @@
 # Personal Introduction {.unnumbered}
 
-My name is Borui. I am from China. I did my undergraduate degree at China Agriculture University and majored in Landscape Architecture.
+My name is Borui. I am from Beijing. I did my undergraduate degree at China Agricultural University and majored in Landscape Architecture. During that time, I became interested in landscape design, which covered topics such as food security, climate change, urban segregation, etc. This is [my portfolio](https://issuu.com/borui-wang/docs/borui_wang_portfolio) from undergrad. I am also interested in the challenges that cities will face due to climate change, such as flooding, and chose a related topic for my undergraduate final project.
+
+Now, I am studying MSc in spatial data science. I hope to be able to analyse the problems in urban space using data sciences and to improve my quantitative analysis and coding skills.
+
+I took this module Remotely Sensing Cities and Environments to learn more about environmental hazards arising from a changing climate. Through learning and operationalising remotely sensed Earth observation data, I hope I can provide effective recommendations for today's cities or urban planning.
+
+This diary will record my learning process throughout the module. It includes a summary of knowledge from each lesson, practical application and personal reflective thinking. I hope to be able to show what I have learnt from this module in this way.

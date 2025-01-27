@@ -78,5 +78,25 @@
     "crumbs": [
       "References"
     ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CASA0023 Learning Diary",
+    "section": "",
+    "text": "Personal Introduction\nMy name is Borui. I am from Beijing. I did my undergraduate degree at China Agricultural University and majored in Landscape Architecture. During that time, I became interested in landscape design, which covered topics such as food security, climate change, urban segregation, etc. This is my portfolio from undergrad. I am also interested in the challenges that cities will face due to climate change, such as flooding, and chose a related topic for my undergraduate final project.\nNow, I am studying MSc in spatial data science. I hope to be able to analyse the problems in urban space using data sciences and to improve my quantitative analysis and coding skills.\nI took this module Remotely Sensing Cities and Environments to learn more about environmental hazards arising from a changing climate. Through learning and operationalising remotely sensed Earth observation data, I hope I can provide effective recommendations for today’s cities or urban planning.\nThis diary will record my learning process throughout the module. It includes a summary of knowledge from each lesson, practical application and personal reflective thinking. I hope to be able to show what I have learnt from this module in this way.",
+    "crumbs": [
+      "Personal Introduction"
+    ]
+  },
+  {
+    "objectID": "Wk2_Presentation.html",
+    "href": "Wk2_Presentation.html",
+    "title": "Xaringan Presentation",
+    "section": "",
+    "text": "This week we tried to use markdown tools like Xaringan and Quarto to show our idea on the website with code. How to adjust the templates and hide the code blocks was difficult for me during the learning process. Creating presentations through code gives the presentation file greater presentational reproducibility and flexibility. Although the process of learning is difficult, it can give me a strong sense of achievement. Here is a presentation that introduces the functions of the Sentinel-2, created through the Xaringan.\n\n\n\n\n\n\n\n\nView Full PowerPoint",
+    "crumbs": [
+      "Xaringan Presentation"
+    ]
   }
 ]
