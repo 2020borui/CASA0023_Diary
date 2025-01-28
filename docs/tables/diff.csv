@@ -1,0 +1,7 @@
+Comparison Factors,Sentinel-2,Landsat 8
+Temporal Coverage,~73 times/year (high frequency),~23 times/year (low frequency)
+Spatial Resolution,"10 m (selected bands), 20 m (red edge)",30 m (except 15 m panchromatic)
+Band Configuration,"Visible, NIR, SWIR, red edge (no thermal infrared)","Visible, NIR, SWIR, thermal infrared"
+Classification Performance,Multi-temporal features enhance vegetation health classification,"Long-term data improves stability, versatile band coverage"
+Advantages,"Superior for small-scale, short-term changes (e.g., vegetation health)","Superior for large-scale, long-term changes (e.g., vegetation types)"
+Applications,Better for specific feature prediction,Better for large-scale classification

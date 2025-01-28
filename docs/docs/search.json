@@ -1,0 +1,102 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CASA0023 Learning Diary",
+    "section": "",
+    "text": "Personal Introduction\nMy name is Borui. I am from China. I did my undergraduate degree at China Agriculture University and majored in Landscape Architecture.",
+    "crumbs": [
+      "Personal Introduction"
+    ]
+  },
+  {
+    "objectID": "Wk1_Introduction_to_remote_sensing.html",
+    "href": "Wk1_Introduction_to_remote_sensing.html",
+    "title": "Introduction to remote sensing",
+    "section": "",
+    "text": "1.1 Summary\nThis week’s learning content can be divided into two parts: The first part is the concept of remote sensing and the process of gaining the data. Especially, discussing how the interaction between Electromagnetic radiation and Earth’s surface (reflecting, absorbing and scattering) influences the data quality. There are different impacts on electromagnetic radiation with different wavelengths, so it’s important to choose suitable bands to analyse. Moreover, the weather especially the clouds will influence on capturing data. SAR can go through the clouds to reduce the impacts.\nThe second parts introduce the type of remote data, and how to simply deal with data by plotting spectral signatures. In this practical we use snap and r to deal with Landsat and Sentinel data. The main difference between remote data is from four resolutions: spatial, spectral, temporal and radiometric.\nThe steps are:\nTasseled Caps",
+    "crumbs": [
+      "Introduction to remote sensing"
+    ]
+  },
+  {
+    "objectID": "Wk1_Introduction_to_remote_sensing.html#summary",
+    "href": "Wk1_Introduction_to_remote_sensing.html#summary",
+    "title": "Introduction to remote sensing",
+    "section": "",
+    "text": "remote sensing process Source: Remote Sensing for Dummies\n\n\n\n\n\n\nDownloading data with less cloud cover, choosing different band combinations for different visuals\n\n\nMasking the study area and resampling the data in one spatial resolution using the nearest neighbour. Choosing down-scaling to avoid errors when calculating. The nearest neighbour is more effective and faster than bilinear or cubic convolution. But there will be abrupt changes at the boundary leading to large errors. When deciding to resample the resolution should not change too much which will influence the accuracy of the result.\n\n\nSelect POIs, and create vector data containers for different land cover.\n\n\nDraw vector, export the Geo-tiff and shapefile load the file in R studio, and extract the value of tiff by vector.\n\n\nPlotting the Spectral signatures and comparing the difference of two sensors with the same band and same land use by t-test. The value of Landsat is much greater than that of Sentinel.\n\n\n\n\n\n\n\n\n\n\n\nLandsat Spectral signatures\n\n\n\n\n\n\n\nSentinel Spectral signatures",
+    "crumbs": [
+      "Introduction to remote sensing"
+    ]
+  },
+  {
+    "objectID": "Wk1_Introduction_to_remote_sensing.html#applications",
+    "href": "Wk1_Introduction_to_remote_sensing.html#applications",
+    "title": "Introduction to remote sensing",
+    "section": "1.2 Applications",
+    "text": "1.2 Applications\nI’m interested in remote sensing in vegetation monitoring. The main difference between the two sensors Landsat and Sentinel is in the various resolutions on spatial, spectral and temporal. By comparing two articles about machine learning used in vegetation monitoring, I observed that two types of data perform differently in different tasks. Sentinel data performs more accurately in predicting by regression on a small scale, the Landsat data is more accurate in classifying vegetation types over large areas.\nIt may be due to the following reasons: Sentinel has a red edge band (B5, B6 and B7) that is more sensitive to monitoring vegetation. It also has a higher resolution of around 10M and 20M, so it has a more accurate prediction of vegetation characteristics such as trunk height for forest variables. (Astola et al. 2019) Sentinel has a 5-day return cycle, so, it captures short-term changes in vegetation well, but it will be complicated to handle large ranges of data. As a new sensor from 2015, it may be a lack of data build-up.\n\n\n\nModel accuracy for different data sources Source: Ram C. Sharma’s article\n\n\nTo my surprise, Landsat data are more accurate in studies related to the classification of vegetation types by setting a random forest model. (Sharma, Hara, and Tateishi 2017)Although Landsat has a 16-day return cycle, due to the length of time covered it has rich datasets and it has SWIR and thermal infrared bands, both of which can provide help for the study of large-scale classification. At the end of the article, the author got a more precise classification by combination of the two types of data.\nHow can these methods be applied to real life? Scientists found that near-infrared radiation can observe the health of vegetation. It is based on the principle that the health status of plants will influence the plant’s spectrum of both absorption and reflection. The U.S. Department of Agriculture uses Landsat and the U.S. Geological Survey to forecast agricultural productivity in each growing season. () According to the comparison above, I think the result will be better to use Landsat data for large-scale farmland species identification, and then use Sentinel data to monitor small-scale changes in the growing season of a single crop.\n\n\n\nThe difference between Sentinel-2 and Landsat 8\n\n\nComparison Factors\nSentinel-2\nLandsat 8\n\n\n\n\nTemporal Coverage\n~73 times/year (high frequency)\n~23 times/year (low frequency)\n\n\nSpatial Resolution\n10 m (selected bands), 20 m (red edge)\n30 m (except 15 m panchromatic)\n\n\nBand Configuration\nVisible, NIR, SWIR, red edge (no thermal infrared)\nVisible, NIR, SWIR, thermal infrared\n\n\nClassification Performance\nMulti-temporal features enhance vegetation health classification\nLong-term data improves stability, versatile band coverage\n\n\nAdvantages\nSuperior for small-scale, short-term changes (e.g., vegetation health)\nSuperior for large-scale, long-term changes (e.g., vegetation types)\n\n\nApplications\nBetter for specific feature prediction\nBetter for large-scale classification",
+    "crumbs": [
+      "Introduction to remote sensing"
+    ]
+  },
+  {
+    "objectID": "Wk1_Introduction_to_remote_sensing.html#reflection",
+    "href": "Wk1_Introduction_to_remote_sensing.html#reflection",
+    "title": "Introduction to remote sensing",
+    "section": "1.3 Reflection",
+    "text": "1.3 Reflection\nThrough this week I have learnt about the principles of remote sensing and a deep understanding of the advantages and application of Sentinel-2 and Landsat 8 data. Considering that radiation is an important element in remote sensing, I am wondering how climate change affects remote sensing vegetation monitoring. With global warming and the greenhouse effect, will the increased thermal radiation in the atmosphere have impacts on remote sensing results? Will the increased plant transpiration due to warming affect the absorption of red light and the reflection of near-infrared light? Can remote sensing capture the slight changes? Whether the use of thermal infrared bands in vegetation health monitoring needs to be adapted due to global warming? These issues need to be addressed step by step in the future.\nAlthough there are massive studies about using and comparing Landsat and Sentinel-2 data on vegetation research, I am interested in how to innovate under the background of climate change. Could we build a model to predict the influence of climate on vegetation growth? Based on that we can predict how vegetation in a region or globally will be distributed over the next 50 years based on current climate change. It’s a big help to our food security and species conservation. Moreover, through this week’s studying, I also learned how to choose data with suitable resolution and choose a band which is more suitable for specific tasks. I think the ability to choose suitable data sets and methods is important in future study and learning.\n\n\n\n\nAstola, Heikki, Tuomas Häme, Laura Sirro, Matthieu Molinier, and Jorma Kilpi. 2019. “Comparison of Sentinel-2 and Landsat 8 Imagery for Forest Variable Prediction in Boreal Region.” Remote Sensing of Environment 223 (March): 257–73. https://doi.org/10.1016/j.rse.2019.01.019.\n\n\nSharma, Ram, Keitarou Hara, and Ryutaro Tateishi. 2017. “High-Resolution Vegetation Mapping in Japan by Combining Sentinel-2 and Landsat 8 Based Multi-Temporal Datasets Through Machine Learning and Cross-Validation Approach.” Land 6 (3): 50. https://doi.org/10.3390/land6030050.",
+    "crumbs": [
+      "Introduction to remote sensing"
+    ]
+  },
+  {
+    "objectID": "Wk2_Presentation.html",
+    "href": "Wk2_Presentation.html",
+    "title": "Xaringan Presentation",
+    "section": "",
+    "text": "This week we tried to use markdown tools like Xaringan and Quarto to show our idea on the website with code. How to adjust the templates and hide the code blocks was difficult for me during the learning process. Creating presentations through code gives the presentation file greater presentational reproducibility and flexibility. Although the process of learning is difficult, it can give me a strong sense of achievement. Here is a presentation that introduces the functions of the Sentinel-2, created through the Xaringan.\n\n\n\n\n\n\n\n\nView Full PowerPoint",
+    "crumbs": [
+      "Xaringan Presentation"
+    ]
+  },
+  {
+    "objectID": "Wk3_Corrections.html",
+    "href": "Wk3_Corrections.html",
+    "title": "Corrections",
+    "section": "",
+    "text": "This is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "Corrections"
+    ]
+  },
+  {
+    "objectID": "Wk4_Policy.html",
+    "href": "Wk4_Policy.html",
+    "title": "Policy",
+    "section": "",
+    "text": "This is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "Policy"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "1  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Astola, Heikki, Tuomas Häme, Laura Sirro, Matthieu Molinier, and Jorma\nKilpi. 2019. “Comparison of Sentinel-2 and Landsat 8 Imagery for\nForest Variable Prediction in Boreal Region.” Remote Sensing\nof Environment 223 (March): 257–73. https://doi.org/10.1016/j.rse.2019.01.019.\n\n\nSharma, Ram, Keitarou Hara, and Ryutaro Tateishi. 2017.\n“High-Resolution Vegetation Mapping in Japan by Combining\nSentinel-2 and Landsat 8 Based Multi-Temporal Datasets Through Machine\nLearning and Cross-Validation Approach.” Land 6 (3): 50.\nhttps://doi.org/10.3390/land6030050.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+# Xaringan Presentation {.unnumbered}
+
+This week we tried to use markdown tools like Xaringan and Quarto to show our idea on the website with code. How to adjust the templates and hide the code blocks was difficult for me during the learning process. Creating presentations through code gives the presentation file greater presentational reproducibility and flexibility. Although the process of learning is difficult, it can give me a strong sense of achievement. Here is a presentation that introduces the functions of the Sentinel-2, created through the Xaringan.
+
+```{r, echo=FALSE,warning=FALSE, message=FALSE}
+library(xaringanExtra)
+xaringanExtra::embed_xaringan(url = "https://2020borui.github.io/0023Remotely_Sensing/#1",
+                              ratio = "16:9")
+```
+
+[View Full PowerPoint](https://2020borui.github.io/0023Remotely_Sensing/#1)

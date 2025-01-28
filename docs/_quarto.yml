@@ -1,6 +1,5 @@
 project:
   type: book
-  output-dir: docs 
 
 book:
   title: "CASA0023 Learning Diary"
@@ -20,11 +19,9 @@ bibliography: references.bib
 format:
   html:
     theme: cosmo
-  pdf:
-    documentclass: scrreprt
 
 
 editor: visual
-
-
+output-dir: docs
+prefer-html: true
 
