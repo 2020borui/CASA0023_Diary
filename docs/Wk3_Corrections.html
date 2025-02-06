@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Corrections – CASA0023 Learning Diary</title>
+<title>Corrections and Enhancement – CASA0023 Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -54,7 +54,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -119,7 +139,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Wk3_Corrections.html">Corrections</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Wk3_Corrections.html">Corrections and Enhancement</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -165,7 +185,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Wk3_Corrections.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Corrections</span></a>
+ <span class="menu-text">Corrections and Enhancement</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -212,7 +232,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Corrections</h1>
+<h1 class="title">Corrections and Enhancement</h1>
 </div>
 
 
@@ -234,19 +254,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The lecture includes two parts: Correction data and Accessing data. This is preparation for conducting data research.</p>
 <section id="correction" class="level3">
 <h3 class="anchored" data-anchor-id="correction">1.1.1 correction</h3>
-<p>The correction makes the raw remote-sensing data become “Analysis Ready Data”(ARD). In this lecture, we mainly learn four kinds of correction: Geometric Correction, Atmospheric Correction, Orthorectification and Radiometric Correction. I try to figure out the connection between them to have a better understanding. It seems like the Radiometric correction and atmospheric correction are the most common correction steps in remote sensing data processing, and are usually required for every image. Geometric Correction and Orthorectification are commonly used processing scenarios where spatial aberrations exist or where accurate spatial analysis is required, not every data is needed. The following table will introduce details about different corrections. Regression is important in correction methods.</p>
-<p>Surface reflectance is the result of radiative and atmospheric corrections. In practice, we get the reflectance from DN (level 1) through DOS methods. Nowadays there are many ways to get processed data like Landsat8(level 2-surface reflectance). This data has been atmospherically corrected. Saves a lot of work. But in the future, there will be some chance to handle high-resolution images that are not processed. It is still important to know how to correct it and how to tackle problems like aberrations. We should download the data that fits our needs. Using Landsat data as an example, the hierarchical structure of Landsat data is Collection→ Level→ Tier. In general, we choose Collection 2 + Level-2 + Tier 1.</p>
-<div class="cell">
+<p>The correction makes the raw remote-sensing data become “Analysis Ready Data”(ARD). In this lecture, we mainly learn four kinds of correction: Geometric Correction, Atmospheric Correction, Orthorectification, and Radiometric Correction. I try to figure out the connection between them to have a better understanding. It seems like the Radiometric correction and atmospheric correction are the most common correction steps in remote sensing data processing, and are usually required for every image. Geometric Correction and Orthorectification are commonly used processing scenarios where spatial aberrations exist or where accurate spatial analysis is required, not every data is needed. The following table will introduce details about different corrections. Regression is important in correction methods.</p>
+<p>Surface reflectance is the result of radiative and atmospheric corrections. In practice, we get the reflectance from DN (level 1) through DOS methods. Nowadays there are many ways to get processed data like Landsat8 (level 2-surface reflectance). This data has been atmospherically corrected. Saves a lot of work. But in the future, there will be some chance to handle high-resolution images that are not processed. It is still important to know how to correct it and how to tackle problems like aberrations. We should download the data that fits our needs. Using Landsat data as an example, the hierarchical structure of Landsat data is Collection→ Level→ Tier. In general, we choose Collection 2 + Level-2 + Tier 1.</p>
+<div class="cell" data-escape="false">
 <div class="cell-output-display">
 <table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
-<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">Correction</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">purposes /defination</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">methods</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">input data</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">output</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">Applications</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">Correction</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">purposes /defination</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">methods</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">input data</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">output</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">Applications</th>
 </tr>
 </thead>
 <tbody>
@@ -254,25 +274,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Geometric Correction</td>
 <td style="text-align: left;">Corrects distortions caused by the sensor or satellites to align the image with the geographic coordinate system, ensuring spatial accuracy.</td>
 <td style="text-align: left;">different transformation types(linear, polynomial, Helmert…)</td>
-<td style="text-align: left;">Pixel coordinates of the original image, GCPs（Ground Control Points, Pixel coordinates of the rectified (gold standard) map |</td>
-<td style="text-align: left;">orrected image |</td>
-<td style="text-align: left;">he basis for subsequent georectification and Orthorectification |</td>
+<td style="text-align: left;">Pixel coordinates of the original image, GCPs（Ground Control Points, Pixel coordinates of the rectified (gold standard) map</td>
+<td style="text-align: left;">corrected image</td>
+<td style="text-align: left;">The basis for subsequent georectification and orthorectification</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Atmospheric Correction</td>
 <td style="text-align: left;">Removal of environmental attenuation:Atmospheric scattering and Topographic attenuation</td>
 <td style="text-align: left;">DOS（Dark object subtraction, PIFs (Psuedo-invariant Features), Py6S, FLAASH, ACORN, QUAC, ATCOR Empirical Line Correction</td>
-<td style="text-align: left;">|radiance reflected above the surface , Atmospheric attenuation</td>
-<td style="text-align: left;">|Top-of-atmosphere reflectance and Surface reflectance</td>
-<td style="text-align: left;">|Biophysical parameters required and the use of spectral signatures across time and space.</td>
+<td style="text-align: left;">radiance reflected above the surface , Atmospheric attenuation</td>
+<td style="text-align: left;">Top-of-atmosphere reflectance and Surface reflectance</td>
+<td style="text-align: left;">Biophysical parameters required and the use of spectral signatures across time and space.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Orthorectification</td>
 <td style="text-align: left;">removing distortions. making the pixels viewed at the nadir (straight down)</td>
 <td style="text-align: left;">Cosine correction, Minnaert correction, Statistical Empirical correction, C Correction (advancing the Cosine)</td>
 <td style="text-align: left;">radiance, Sun's zenith angle, Sun's incidence angle slope angle (from DEM), slope aspect, solar zenith, solar azimuth</td>
-<td style="text-align: left;">|geographically aligned and topography removed</td>
-<td style="text-align: left;">|Orthorectification Is a subset of georectification, useful for Precise Georeferencing and High-Precision Measurement and Spatial Analysi</td>
+<td style="text-align: left;">geographically aligned and topography removed</td>
+<td style="text-align: left;">Orthorectification Is a subset of georectification, useful for Precise Georeferencing and High-Precision Measurement and Spatial Analysis</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Radiometric Calibration</td>
@@ -299,27 +319,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="image-enhancement" class="level3">
 <h3 class="anchored" data-anchor-id="image-enhancement">1.1.3 Image Enhancement</h3>
 <p>We choose the appropriate data, process it, and modify it to generate the desired output. The methods help us change the image and produce the output for our purpose. The methods are as follows.</p>
-<div class="cell">
+<div class="cell" data-escape="false">
 <div class="cell-output-display">
 <table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
-<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">Enhancement</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">purposes /defination</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">methods</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">input data</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">Advantages</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">Applicable scenarios</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">Enhancement</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">purposes /defination</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">methods</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">input data</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">Advantages</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">Applicable scenarios</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Contrast Enhancement</td>
 <td style="text-align: left;">Improved visualisation of the image by widening the distribution of pixel values.</td>
-<td style="text-align: left;">Minimum - Maximum Percentage Linear and Standard Deviation Piecewise Linear Contrast Stretch</td>
-<td style="text-align: left;">|Images with a narrow distribution</td>
-<td style="text-align: left;">|Enhanced image contrast and details</td>
-<td style="text-align: left;">|pre-processing for subsequent classification and visual interpretation</td>
+<td style="text-align: left;">Minimum- Maximum Percentage Linear and Standard Deviation Piecewise Linear Contrast Stretch</td>
+<td style="text-align: left;">Images with a narrow distributions</td>
+<td style="text-align: left;">Enhance images contrast and details</td>
+<td style="text-align: left;">pre-processing for subsequent classification and visual interpretation</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Band Ratioing</td>
@@ -327,12 +347,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">division operations (like NDVI, NDBI, tasselled cap etc.)</td>
 <td style="text-align: left;">Multi-spectral imagery</td>
 <td style="text-align: left;">Emphasis on relative differences in expression of feature characteristics</td>
-<td style="text-align: left;">Normalized Burn Ratio\The Normalised Difference Vegetation Index\ the Normalized Difference Moisture Index (NDMI)</td>
+<td style="text-align: left;">Normalized Burn Ratio, The Normalised Difference Vegetation Index, the Normalized Difference Moisture Index (NDMI)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Filtering</td>
 <td style="text-align: left;">Suppressing noise or highlighting local variations through filter operations.</td>
-<td style="text-align: left;">Low pass or low frequency (averages the surrounding pixels)/High pass or high frequency - enhance local variations</td>
+<td style="text-align: left;">Low pass or low frequency (averages the surrounding pixels)/High pass or high frequency-enhance local variations</td>
 <td style="text-align: left;">Original data</td>
 <td style="text-align: left;">Smooth or sharpen images; extract edge information as required</td>
 <td style="text-align: left;">Feature extraction, target detection</td>
@@ -348,18 +368,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td style="text-align: left;">Texture</td>
 <td style="text-align: left;">measuring the relationships between pixel-to-pixel, quantifying roughness to obtain feature characteristics.</td>
-<td style="text-align: left;">GLCM(Gray Level Co-occurrence Matrix ) second-order texture measures/ third-order texture measures</td>
-<td style="text-align: left;">|Grey-scale images or single-band data, window</td>
-<td style="text-align: left;">|Characterisation of feature texture, feature classification, target identification</td>
-<td style="text-align: left;">|Land cover classification, target detection, environmental monitoring</td>
+<td style="text-align: left;">GLCM(Gray Level Co-occurrence Matrix ) second-order texture measures, third-order texture measures</td>
+<td style="text-align: left;">Grey-scale images or single-band data, windows</td>
+<td style="text-align: left;">Characterisation of feature texture, feature classification, target identification</td>
+<td style="text-align: left;">Land cover classification, target detection, environmental monitoring</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Fusion</td>
 <td style="text-align: left;">Fusion of data from different sensors or different times</td>
-<td style="text-align: left;">Pan-sharpening、Gram-Schmidt、IHS |M</td>
-<td style="text-align: left;">lti-temporal, multi-sensor data |e</td>
-<td style="text-align: left;">hance the details of the images |H</td>
-<td style="text-align: left;">gh resolution data generate、changes detection、data integration |</td>
+<td style="text-align: left;">Pan-sharpening, Gram-Schmidt, IHS</td>
+<td style="text-align: left;">Multi-temporal, multi-sensor data</td>
+<td style="text-align: left;">enhance the details of the images</td>
+<td style="text-align: left;">High resolution data generate, changes detection, data integration</td>
 </tr>
 </tbody>
 </table>
@@ -371,15 +391,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="application" class="level2">
 <h2 class="anchored" data-anchor-id="application">1.2 Application</h2>
-<p>Due to there are few works that we need to correct by ourselves in the current stage, I will pay more attention to image enhancement. To my surprise, I have discussed a lot about ratios in the last two weeks due to my strong interest in different band groups, it is also the most simple part of enhancement in my view. So this week, I’d like to analyse the application of texture. Texture has better identification of the inner edges of the image. Firstly, I treat texture as independent of other image enhancements. After reading relevant articles, I recognise texture is usually used with other methods. In common for identifying feature characteristics, texture usually data fusion with multi-spectral images. (Urban) It Helps improve identification accuracy. Textured images are related to the use of different texture metrics, window sizes and bands. In the GLCM package in R, there are lots of texture measures. Different combinations are suitable for identifying different landscapes.</p>
-<p>How to choose these variables? Hall-Beyer uses PCA to identify key measures that can be directly selected in feature recognition. Generally choosing Mean, in the case of containing edge-like features, choosing CON.COR, for more detailed texture studies, add Ent. These guidelines help me to choose suitable measures. Texture current applies to natural landscape identification such as forests. () But I think it can also used in small-scale urban identification because Ent is sensitive to unnatural edges and can be used to identify artificial landscapes. What’s more, compared with popular Spectroscopic methods, Texture methods (e.g.&nbsp;GLCM) focus on the spatial pattern of the image and may reduce the band radiometric errors due to temperature variation caused by the city heat island effect. But texture can only be used for enlarged objects due to its large computation, which makes it a big limitation to assist other methods in many cases. Especially, The edges of the city are very complex.</p>
+<p>Due to there are few works that we need to correct by ourselves in the current stage, I will pay more attention to image enhancement. To my surprise, I have discussed a lot about ratios in the last two weeks due to my strong interest in different band groups, it is also the most simple part of enhancement in my view. So this week, I’d like to analyse the application of texture. Texture has better identification of the inner edges of the image. Firstly, I treat texture as independent of other image enhancements. After reading relevant articles, I recognise texture is usually used with other methods. In common for identifying feature characteristics, texture usually data fusion with multi-spectral images. <span class="citation" data-cites="tabibmahmoudi2019">(<a href="references.html#ref-tabibmahmoudi2019" role="doc-biblioref">Tabib Mahmoudi, Arabsaeedi, and Alavipanah 2019</a>)</span> It Helps improve identification accuracy. Textured images are related to the use of different texture metrics, window sizes and bands. In the GLCM package in R, there are lots of texture measures. Different combinations are suitable for identifying different landscapes.</p>
+<div id="fig1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/Texture_Analysis.png" class="img-fluid figure-img" data-fig.align="center" width="345"></p>
+<figcaption>Texture measures Source: Remote Sensing for Dummies</figcaption>
+</figure>
+</div>
+<p>How to choose these variables? Hall-Beyer uses PCA to identify key measures that can be directly selected in feature recognition. Generally choosing Mean, in the case of containing edge-like features, choosing CON.COR, for more detailed texture studies, add Ent. <span class="citation" data-cites="hall-beyer2017">(<a href="references.html#ref-hall-beyer2017" role="doc-biblioref">Hall-Beyer 2017a</a>)</span>These guidelines help me to choose suitable measures. Texture current applies to natural landscape identification such as forests. <span class="citation" data-cites="texture">(<a href="references.html#ref-texture" role="doc-biblioref"><strong>texture?</strong></a>-)</span> But I think it can also used in small-scale urban identification because Ent is sensitive to unnatural edges and can be used to identify artificial landscapes. What’s more, compared with popular Spectroscopic methods, Texture methods (e.g.&nbsp;GLCM) focus on the spatial pattern of the image and may reduce the band radiometric errors due to temperature variation caused by the city heat island effect. But texture can only be used for enlarged objects due to its large computation, which makes it a big limitation to assist other methods in many cases. Especially, The edges of the city are very complex.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/texture.png" class="img-fluid figure-img" data-fig.align="center" width="359"></p>
+<figcaption>Different texture measures visual appearance Source:</figcaption>
+</figure>
+</div>
 </section>
 <section id="reflection" class="level2">
 <h2 class="anchored" data-anchor-id="reflection">1.3 Reflection</h2>
-<p>This week we learned Correction, Mosaicking and image enhancement. We usually comprehend different methods and concepts separately during the learning process. (But the content this week is still hard for me.) But in practice, for different bands and spatial resolutions, the effects of the different methods are also different, so it is necessary to combine various methods. For example, when doing principal component analysis (PCA) on spectral data, the subsequent eigenchannels usually represent indexes like NDVI (vegetation) mentioned in the band ratio. This suggests that there may be a relationship of complementarity between the different approaches. In addition, in order to get more clearer images and results, researchers often combine different sensor data and methods of analysis.</p>
+<p>This week we learned Correction, Mosaicking, and image enhancement. We usually comprehend different methods and concepts separately during the learning process. (But the content this week is still hard for me.) But in practice, for different bands and spatial resolutions, the effects of the different methods are also different, so it is necessary to combine various methods. For example, when doing principal component analysis (PCA) on spectral data, the subsequent eigenchannels usually represent indexes like NDVI (vegetation) mentioned in the band ratio.<span class="citation" data-cites="hall-beyer2017a">(<a href="references.html#ref-hall-beyer2017a" role="doc-biblioref">Hall-Beyer 2017b</a>)</span> This suggests that there may be a relationship of complementarity between the different approaches. In addition, in order to get more clearer images and results, researchers often combine different sensor data and methods of analysis.</p>
 <p>I realize that innovations don’t have to be just coming up with new approaches. In many cases, integrating, and regrouping existing methods, and applying them to new objects is also an important innovative way for research. That’s why although the data we deal with is already corrected we still need to learn the details about corrections. Researchers need to have an in-depth understanding of the data source and character and the scenarios for the application of various data correction and processing methods. Only based on a full knowledge of these can reasonable analyses and judgments be made. That’s why this week we need to Learning the formulas and principles of the method of correction.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-hall-beyer2017" class="csl-entry" role="listitem">
+Hall-Beyer, Mryka. 2017a. <span>“Practical Guidelines for Choosing GLCM Textures to Use in Landscape Classification Tasks over a Range of Moderate Spatial Scales.”</span> <em>International Journal of Remote Sensing</em> 38 (5): 1312–38. <a href="https://doi.org/10.1080/01431161.2016.1278314">https://doi.org/10.1080/01431161.2016.1278314</a>.
+</div>
+<div id="ref-hall-beyer2017a" class="csl-entry" role="listitem">
+———. 2017b. <span>“Practical Guidelines for Choosing GLCM Textures to Use in Landscape Classification Tasks over a Range of Moderate Spatial Scales.”</span> <em>International Journal of Remote Sensing</em> 38 (5): 1312–38. <a href="https://doi.org/10.1080/01431161.2016.1278314">https://doi.org/10.1080/01431161.2016.1278314</a>.
+</div>
+<div id="ref-tabibmahmoudi2019" class="csl-entry" role="listitem">
+Tabib Mahmoudi, Fatemeh, Alireza Arabsaeedi, and Seyed Kazem Alavipanah. 2019. <span>“Feature-Level Fusion of Landsat 8 Data and SAR Texture Images for Urban Land Cover Classification.”</span> <em>Journal of the Indian Society of Remote Sensing</em> 47 (3): 479–85. <a href="https://doi.org/10.1007/s12524-018-0914-8">https://doi.org/10.1007/s12524-018-0914-8</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
