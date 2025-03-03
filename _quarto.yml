@@ -12,6 +12,7 @@ book:
     - Wk2_Presentation.qmd
     - Wk3_Corrections.qmd
     - Wk4_Policy.qmd
+    - Wk6_GEE.qmd
     - references.qmd
 
 bibliography: references.bib

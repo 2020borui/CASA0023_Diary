@@ -1,0 +1,43 @@
+# An introduction to Google Earth Engine
+
+## Summary
+
+Google Earth Engine(GEE) can access and tackle Geographic information data quickly by using a cloud computing platform. I think GEE has two main benefits.
+
+### Benefits
+
+1.  GEE is lazy computing for users compared with traditional data analysis methods like ArcGIS, R and Python. GEE data preprocessing operations, such as reprojection and uniform resolution, can be handled automatically. So, the data in GEE is analysis-ready. It helps users to focus on data analysis and application work.
+
+2.  GEE can access and deal with large-scale data, especially global remote sensing data. As a cloud-based platform, it is easy for researchers to disseminate their results to others, making the project more reproducible. No need to upload local files to GitHub (which has a size limit, and most remote sensing images can't be uploaded) to share the results as before. This process uses a pyramid of downsampled tiles, reducing the image to multiple scales until it reaches 256 × 256 pixels per tile. Making the processing more efficient. Here, I use the image and the example of LandSat with 30m resolution to help me understand it.
+
+    ![GEE Resolution Pyramid](img/pyramid.jpg)
+
+In GEE, we can perform lots of processes, like reducing images, linear regression, image enhancements, etc. GEE is mainly programmed with JavaScript; compared with R, the data tackling is more simplified. The table shows the differences between GEE and R.
+
+```{r echo=FALSE,warning=FALSE, message=FALSE,escape = FALSE}
+library(dplyr)
+library(tidyverse)
+library(kableExtra)
+library(readr)
+library(here)
+library(knitr)
+library(kableExtra)
+library(readxl)
+library(fs)
+
+#read in data
+read_excel(here("tables", "table6.xlsx")) %>%
+  knitr::kable(booktabs = TRUE,format = "html") %>%
+  kable_styling(position = "center", fixed_thead = TRUE, latex_options = "scale_down") %>%
+  row_spec(0, bold = TRUE)
+```
+
+### Limitations
+
+GEE is used in a variety of study areas like global forest change, crop yield estimation, fire recovery, etc. because of its efficient access and computation and the wealth of data types and functions in the library. It can especially show its benefits when it comes to large-scale data or time series analyses. However, it also has limitations. 1. It is influenced by Google's server resource allocation; Google's server resources affect request limits, including how long they run and how many can run at the same time.. That may lead to the failure of some complicated computation. 2. It may not work well for operations involving value can be influenced by arbitrarily distant input or data not covered by the GEE library.
+
+## Application
+
+![Different texture measures visual appearance Source:](img/texture.png){fig.align="center" fig-align="center" width="500"}
+
+## Reflection
