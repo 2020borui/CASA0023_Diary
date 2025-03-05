@@ -1,3 +1,7 @@
+---
+bibliography: references.bib
+---
+
 # An introduction to Google Earth Engine
 
 ## Summary
@@ -8,9 +12,15 @@ Google Earth Engine(GEE) can access and tackle Geographic information data quick
 
 1.  GEE is lazy computing for users compared with traditional data analysis methods like ArcGIS, R and Python. GEE data preprocessing operations, such as reprojection and uniform resolution, can be handled automatically. So, the data in GEE is analysis-ready. It helps users to focus on data analysis and application work.
 
-2.  GEE can access and deal with large-scale data, especially global remote sensing data. As a cloud-based platform, it is easy for researchers to disseminate their results to others, making the project more reproducible. No need to upload local files to GitHub (which has a size limit, and most remote sensing images can't be uploaded) to share the results as before. This process uses a pyramid of downsampled tiles, reducing the image to multiple scales until it reaches 256 × 256 pixels per tile. Making the processing more efficient. Here, I use the image and the example of LandSat with 30m resolution to help me understand it.
+2.  GEE can access and deal with large-scale data, especially global remote sensing data. As a cloud-based platform, it is easy for researchers to disseminate their results to others, making the project more reproducible. No need to upload local files to GitHub (which has a size limit, and most remote sensing images can't be uploaded) to share the results as before.\
 
-    ![GEE Resolution Pyramid](img/pyramid.jpg)
+```{r, echo=FALSE, fig.align='center', out.width="300px", out.height="300px"}
+knitr::include_graphics("img/wk6_cat.png")
+```
+
+This process uses a pyramid of downsampled tiles, reducing the image to multiple scales until it reaches 256 × 256 pixels per tile. Making the processing more efficient. Here, I use the image and the example of LandSat with 30m resolution to help me understand it.
+
+![](img/pyramid.jpg)
 
 In GEE, we can perform lots of processes, like reducing images, linear regression, image enhancements, etc. GEE is mainly programmed with JavaScript; compared with R, the data tackling is more simplified. The table shows the differences between GEE and R.
 
@@ -38,6 +48,23 @@ GEE is used in a variety of study areas like global forest change, crop yield es
 
 ## Application
 
-![Different texture measures visual appearance Source:](img/texture.png){fig.align="center" fig-align="center" width="500"}
+I have explored what influence the data from different sensors would have on the analysis of crop yield estimation. This week, I want to focus on the impact of analyses of GEE. I conclude two articles to make comparisons, both of them using a vegetation index to set up a random forest model to predict the crop yield. But one of them used GEE to analyse, the other used traditional methods.
+
+1.  The role of GEE in data processing
+
+Choudhary et al. @choudhary2022 using GEE to remove all errors and get similar weight to tackle the data quickly. These steps helps quickly access to multi-temporal Sentinel-2 data and reduce the time to deal with data. But GEE data tackling may ignore the unusual weather or special local terrain which may reduces the prediction accuracy. Hunt et al. @astola2019a did data pre-processing manually (like using buffer to remove gaps from data cleaning), selecting a date image with fewer clouds and use Sen2Cor processor to correct data, improved the quality of input data ,so the model performances more consistent.
+
+2.  Performance of random forests in GEE and non-GEE environments
+
+Hunt et al. @astola2019a using different combinations of data( meteorological, terrain, and soil moisture content) to improve the RF model prediction result in wheat production. Precision of yield estimation at field level (RMSE 0.61 t/ha) is a specific estimation methods can be modified with manual feature adjustment to select model parameters and data input. This approach is more suitable for small-scale, high-precision farm management. Choudhary et al. @choudhary2022 used GEE for efficient calculation and can quickly complete comparative testing of multiple models (RF, linear regression, decision trees). Although the model accuracy is (RMSE 0.40 t/ha) lower than traditional methods. The advantage of GEE is that it is suitable for large-scale agricultural monitoring. It is easy to analyse vegetation dynamics across seasons and over long periods of time using GEE. GEE can automate data handling processes, although it limits variable screening and manual model simulations affect accuracy, but it is suitable for large scale learning.
+
+::: {layout-ncol="2"}
+![local computing](img/wk6_lo.png){width="250"}
+![GEE Cloud Platform](img/wk6_GEE.png){width="230"}
+:::
 
 ## Reflection
+
+After comparing the above two articles, according to the features of the plant, I think it is more appropriate to exchange the tools used by the article. Wheat is mostly grown in the plains with larger areas per farmland, which has been put into mechanised production on a large scale. So, it is more suitable for larger-scale predictions using GEE. GEE can be monitored across multiple growing seasons, providing data for large-scale crop yield estimation, supply chain regulation and reduction monitoring. Field crops such as corn and soybeans are also well-suited for GEE analysis.
+
+Local calculation can use high resolution commercial remotely sensed data (like quick bird) is more suitable for rice. Because rice is a crop with small field sizes and complex growing practices (e.g. terraced planting, mixed cropping) that requires careful management. Specific local calculation can combine local climate and terrain data to classify and analyse more accurately which support the intensive farming needs such as pest and disease monitoring, soil and water conservation, etc. GEE is limited by its resolution, making it difficult to meet the accuracy needs However, high-resolution remote sensing data is expensive, now is only available using in Japan and Korea. For other rice-growing Asian countries it is hard to promote. So, GEE will help these country access to remote-sensing data with low-cost, extensive crop monitoring and food security in those place. In future, the process depends not only on data quality and computational power but also can combine with crop growth characteristics, agricultural production patterns and economic viability.
