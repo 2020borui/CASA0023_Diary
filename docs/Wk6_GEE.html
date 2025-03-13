@@ -50,7 +50,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./Wk7_Clas1.html" rel="next">
 <link href="./Wk4_Policy.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -168,6 +168,12 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./Wk7_Clas1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification Ⅰ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
@@ -228,13 +234,19 @@ div.csl-indent {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/wk6_cat.png" class="quarto-figure quarto-figure-center figure-img" width="300" height="300"></p>
+<p><img src="img/wk6_cat.png" width="300" height="300" class="figure-img"></p>
+<figcaption>Github limitation</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>This process uses a pyramid of downsampled tiles, reducing the image to multiple scales until it reaches 256 × 256 pixels per tile. Making the processing more efficient. Here, I use the image and the example of LandSat with 30m resolution to help me understand it.</p>
-<p><img src="img/pyramid.jpg" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/pyramid.jpg" class="img-fluid figure-img"></p>
+<figcaption>Resolution Pyramid Source: GEE</figcaption>
+</figure>
+</div>
 <p>In GEE, we can perform lots of processes, like reducing images, linear regression, image enhancements, etc. GEE is mainly programmed with JavaScript; compared with R, the data tackling is more simplified. The table shows the differences between GEE and R.</p>
 <div class="cell" data-escape="false">
 <div class="cell-output-display">
@@ -310,18 +322,26 @@ div.csl-indent {
 <ol type="1">
 <li>The role of GEE in data processing</li>
 </ol>
-<p>Choudhary et al. <span class="citation" data-cites="choudhary2022">Choudhary et al. (<a href="references.html#ref-choudhary2022" role="doc-biblioref">2022</a>)</span> using GEE to remove all errors and get similar weight to tackle the data quickly. These steps helps quickly access to multi-temporal Sentinel-2 data and reduce the time to deal with data. But GEE data tackling may ignore the unusual weather or special local terrain which may reduces the prediction accuracy. Hunt et al. <span class="citation" data-cites="astola2019a">Astola et al. (<a href="references.html#ref-astola2019a" role="doc-biblioref">2019</a>)</span> did data pre-processing manually (like using buffer to remove gaps from data cleaning), selecting a date image with fewer clouds and use Sen2Cor processor to correct data, improved the quality of input data ,so the model performances more consistent.</p>
+<p>Choudhary et al. <span class="citation" data-cites="choudhary2022">Choudhary et al. (<a href="references.html#ref-choudhary2022" role="doc-biblioref">2022</a>)</span> are using GEE to remove all errors and get similar weight to tackle the data quickly. These steps help quickly access multi-temporal Sentinel-2 data and reduce the time to deal with data. But GEE data tackling may ignore the unusual weather or special local terrain, which may reduce the prediction accuracy. Hunt et al. <span class="citation" data-cites="hunt2019">Hunt et al. (<a href="references.html#ref-hunt2019" role="doc-biblioref">2019</a>)</span> did data pre-processing manually (like using a buffer to remove gaps from data cleaning), selecting a date image with fewer clouds and using a Sen2Cor processor to correct data, improving the quality of input data, so the model performances are more consistent.</p>
 <ol start="2" type="1">
 <li>Performance of random forests in GEE and non-GEE environments</li>
 </ol>
-<p>Hunt et al. <span class="citation" data-cites="astola2019a">Astola et al. (<a href="references.html#ref-astola2019a" role="doc-biblioref">2019</a>)</span> using different combinations of data( meteorological, terrain, and soil moisture content) to improve the RF model prediction result in wheat production. Precision of yield estimation at field level (RMSE 0.61 t/ha) is a specific estimation methods can be modified with manual feature adjustment to select model parameters and data input. This approach is more suitable for small-scale, high-precision farm management. Choudhary et al. <span class="citation" data-cites="choudhary2022">Choudhary et al. (<a href="references.html#ref-choudhary2022" role="doc-biblioref">2022</a>)</span> used GEE for efficient calculation and can quickly complete comparative testing of multiple models (RF, linear regression, decision trees). Although the model accuracy is (RMSE 0.40 t/ha) lower than traditional methods. The advantage of GEE is that it is suitable for large-scale agricultural monitoring. It is easy to analyse vegetation dynamics across seasons and over long periods of time using GEE. GEE can automate data handling processes, although it limits variable screening and manual model simulations affect accuracy, but it is suitable for large scale learning.</p>
-<div>
-
+<p>Hunt et al. <span class="citation" data-cites="hunt2019">Hunt et al. (<a href="references.html#ref-hunt2019" role="doc-biblioref">2019</a>)</span> using different combinations of data( meteorological, terrain, and soil moisture content) to improve the RF model prediction result in wheat production. Precision of yield estimation at field level (RMSE 0.61 t/ha) is a specific estimation method that can be modified with manual feature adjustment to select model parameters and data input. This approach is more suitable for small-scale, high-precision farm management. Choudhary et al. <span class="citation" data-cites="choudhary2022">Choudhary et al. (<a href="references.html#ref-choudhary2022" role="doc-biblioref">2022</a>)</span> used GEE for efficient calculation and can quickly complete comparative testing of multiple models (RF, linear regression, decision trees). However, the model accuracy is (RMSE 0.40 t/ha) lower than traditional methods. The advantage of GEE is that it is suitable for large-scale agricultural monitoring. It is easy to analyse vegetation dynamics across seasons and over long periods of time using GEE. GEE can automate data handling processes, although it limits variable screening and manual model simulations affect accuracy, but it is suitable for large scale learning.</p>
+<div class="grid">
+<div class="g-col-6">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/wk6_lo.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Local Computing Source: <span class="citation" data-cites="hunt2019">Hunt et al. (<a href="references.html#ref-hunt2019" role="doc-biblioref">2019</a>)</span></figcaption>
+</figure>
 </div>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><img src="img/wk6_lo.png" class="img-fluid" width="250" alt="local computing"> <img src="img/wk6_GEE.png" class="img-fluid" width="230" alt="GEE Cloud Platform"></p>
+</div>
+<div class="g-col-6">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/wk6_GEE.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>GEE Cloud Platform Source: <span class="citation" data-cites="choudhary2022">Choudhary et al. (<a href="references.html#ref-choudhary2022" role="doc-biblioref">2022</a>)</span></figcaption>
+</figure>
 </div>
 </div>
 </div>
@@ -333,11 +353,11 @@ div.csl-indent {
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-astola2019a" class="csl-entry" role="listitem">
-Astola, Heikki, Tuomas Häme, Laura Sirro, Matthieu Molinier, and Jorma Kilpi. 2019. <span>“Comparison of Sentinel-2 and Landsat 8 Imagery for Forest Variable Prediction in Boreal Region.”</span> <em>Remote Sensing of Environment</em> 223 (March): 257–73. <a href="https://doi.org/10.1016/j.rse.2019.01.019">https://doi.org/10.1016/j.rse.2019.01.019</a>.
-</div>
 <div id="ref-choudhary2022" class="csl-entry" role="listitem">
 Choudhary, K., W. Shi, Y. Dong, and R. Paringer. 2022. <span>“Random Forest for Rice Yield Mapping and Prediction Using Sentinel-2 Data with Google Earth Engine.”</span> <em>Advances in Space Research</em> 70 (8): 2443–57. <a href="https://doi.org/10.1016/j.asr.2022.06.073">https://doi.org/10.1016/j.asr.2022.06.073</a>.
+</div>
+<div id="ref-hunt2019" class="csl-entry" role="listitem">
+Hunt, Merryn L., George Alan Blackburn, Luis Carrasco, John W. Redhead, and Clare S. Rowland. 2019. <span>“High Resolution Wheat Yield Mapping Using Sentinel-2.”</span> <em>Remote Sensing of Environment</em> 233 (November): 111410. <a href="https://doi.org/10.1016/j.rse.2019.111410">https://doi.org/10.1016/j.rse.2019.111410</a>.
 </div>
 </div>
 </section>
@@ -767,8 +787,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Wk7_Clas1.html" class="pagination-link" aria-label="Classification Ⅰ">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification Ⅰ</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

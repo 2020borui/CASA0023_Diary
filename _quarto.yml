@@ -13,6 +13,7 @@ book:
     - Wk3_Corrections.qmd
     - Wk4_Policy.qmd
     - Wk6_GEE.qmd
+    - Wk7_Clas1.qmd
     - references.qmd
 
 bibliography: references.bib
