@@ -1,0 +1,11 @@
+Criteria,Object-Based Image Analysis (OBIA),Spectral Mixture Analysis (SMA)
+Basic Unit,Object (multiple pixels),Mixed pixel (one pixel contains multiple land cover types)
+Resolution,"High-resolution (UAV, WorldView)","Low to medium resolution (MODIS, Landsat)"
+Classification,"Machine learning (SVM, Decision Tree, KNN, Random Forest)","Spectral unmixing (LSU, MESMA, V-I-S model)"
+Features Used,"Spectral, spatial, shape-related (length-width ratio, edge length, compactness)",Spectral only
+Main Methods,"- Segmentation: SLIC, Watershed, Multi-resolution segmentation","- Unmixing: Linear Spectral Unmixing (LSU), MESMA"
+,"- Classification: SVM, Random Forest, Decision Tree, KNN",- Land Cover Fractions: V-I-S model
+Applications,"Urban classification, land cover mapping","Mixed land cover analysis, vegetation fraction estimation"
+Complexity,High (segmentation + classification),Low (spectral analysis only)
+Advantages,"High accuracy, noise reduction",Estimates sub-pixel land cover proportions
+Limitations,"Requires segmentation, preprocessing",Sensitive to endmember selection

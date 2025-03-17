@@ -8,29 +8,29 @@ bibliography: references.bib
 
 This week’s learning covered image classification. This is based on the pattern recognition or machine learning to turn every pixel in the image into one of classification. Image classification is applied in many areas like agriculture monitoring, air pollution, forest monitoring and urban green spaces assessment.
 
-## Conclusion of the process of analysing remotely sensed images
+### Conclusion of the process of analysing remotely sensed images
 
 Combining the previous studies and articles, I think the analysis of remotely sensed images includes: 1. Data obtained – 2 pre-processed- 3. image enhancement-4. Factor choosing -5. Predict modelling(classification/regression)-6. Result assessment. Image classification belongs to the fifth step, which directly affects the final research results.
 
-## Approaches to image classification
+### Approaches to image classification
 
-### Unsupervised classification
+#### Unsupervised classification
 
 These methods are applied to identify data with unknown land cover classes. Data were labelled into different categories using ML methods like clustering (k-means, DB-scan) based on spectral features. This reduces the influence of the human factor. The initial result of unsupervised classification may have mixed categories, so it always needs downscaling methods like PCA to optimise.
 
 ![Unsupervised classification Source: \[GISgeography\](https://gisgeography.com/image-classification-techniques-remote-sensing/)](img/Unsupervised%20.png){fig-align="center" width="500"}
 
-### Supervised classification
+#### Supervised classification
 
 These methods are the Classifier learns pattern in the data and puts the labels onto new data. It includes Parametric methods and Non-parametric methods. Recent studies tend to use machine learning/expert systems or spectral hybrid analyses. The steps in supervised classification include class definition, pre-processing, training, pixel assignment, and accuracy assessment.
 
 ![Supervised classification Source: \[GISgeography\](https://gisgeography.com/image-classification-techniques-remote-sensing/)](img/supervised.png){fig-align="center" width="500"}
 
-#### Parametric methods
+##### Parametric methods
 
 They are based on the assumption that the data follow a certain distribution pattern (normal distribution). These are traditional methods. The advantage is the clarity of the calculation process. However, they have strict requirements on data distribution and are only applied to small data volumes and simple solutions.
 
-#### Non-parametric methods
+##### Non-parametric methods
 
 They can apply to complex calculation processes, do not rely on the data distribution and are very popular now. They are computation-heavy and require a large amount of data to train the model.
 

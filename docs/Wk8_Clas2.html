@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Corrections and Enhancement – CASA0023 Learning Diary</title>
+<title>7&nbsp; Classification Ⅱ – CASA0023 Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 /* CSS for citations */
 div.csl-bib-body { }
@@ -84,8 +50,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Wk4_Policy.html" rel="next">
-<link href="./Wk2_Presentation.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./Wk7_Clas1.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -139,7 +105,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Wk3_Corrections.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Enhancement</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Wk8_Clas2.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification Ⅱ</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -184,7 +150,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Wk3_Corrections.html" class="sidebar-item-text sidebar-link active">
+  <a href="./Wk3_Corrections.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Enhancement</span></span></a>
   </div>
 </li>
@@ -208,7 +174,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Wk8_Clas2.html" class="sidebar-item-text sidebar-link">
+  <a href="./Wk8_Clas2.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification Ⅱ</span></span></a>
   </div>
 </li>
@@ -228,14 +194,14 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">3.1</span> Summary</a>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">7.1</span> Summary</a>
   <ul class="collapse">
-  <li><a href="#correction" id="toc-correction" class="nav-link" data-scroll-target="#correction"><span class="header-section-number">3.1.1</span> Correction</a></li>
-  <li><a href="#joining-the-data" id="toc-joining-the-data" class="nav-link" data-scroll-target="#joining-the-data"><span class="header-section-number">3.1.2</span> Joining the data</a></li>
-  <li><a href="#image-enhancement" id="toc-image-enhancement" class="nav-link" data-scroll-target="#image-enhancement"><span class="header-section-number">3.1.3</span> Image Enhancement</a></li>
+  <li><a href="#advanced-classification-methods" id="toc-advanced-classification-methods" class="nav-link" data-scroll-target="#advanced-classification-methods"><span class="header-section-number">7.1.1</span> Advanced classification methods</a></li>
+  <li><a href="#accuracy" id="toc-accuracy" class="nav-link" data-scroll-target="#accuracy"><span class="header-section-number">7.1.2</span> Accuracy</a></li>
+  <li><a href="#cross-validation" id="toc-cross-validation" class="nav-link" data-scroll-target="#cross-validation"><span class="header-section-number">7.1.3</span> Cross-validation</a></li>
   </ul></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">3.2</span> Application</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">3.3</span> Reflection</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">7.2</span> Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">7.3</span> Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -244,7 +210,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Enhancement</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification Ⅱ</span></h1>
 </div>
 
 
@@ -261,58 +227,72 @@ div.csl-indent {
 </header>
 
 
-<section id="summary" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">3.1</span> Summary</h2>
-<p>The lecture includes two parts: Correction data and Accessing data. This is preparation for conducting data research.</p>
-<section id="correction" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="correction"><span class="header-section-number">3.1.1</span> Correction</h3>
-<p>The correction makes the raw remote-sensing data become “Analysis Ready Data”(ARD). In this lecture, we mainly learn four kinds of correction: Geometric Correction, Atmospheric Correction, Orthorectification, and Radiometric Correction. I try to figure out the connection between them to have a better understanding. It seems like the Radiometric correction and atmospheric correction are the most common correction steps in remote sensing data processing, and are usually required for every image. Geometric Correction and Orthorectification are commonly used processing scenarios where spatial aberrations exist or where accurate spatial analysis is required, not every data is needed. The following table will introduce details about different corrections. Regression is important in correction methods.</p>
-<p>Surface reflectance is the result of radiative and atmospheric corrections. In practice, we get the reflectance from DN (level 1) through DOS methods. Nowadays there are many ways to get processed data like Landsat8 (level 2-surface reflectance). This data has been atmospherically corrected. Saves a lot of work. But in the future, there will be some chance to handle high-resolution images that are not processed. It is still important to know how to correct it and how to tackle problems like aberrations. We should download the data that fits our needs. Using Landsat data as an example, the hierarchical structure of Landsat data is Collection→ Level→ Tier. In general, we choose Collection 2 + Level-2 + Tier 1.</p>
+<section id="summary" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">7.1</span> Summary</h2>
+<p>This week, we learned about land cover classifications and accuracy. The first part is about advanced classification methods, the second part is about Error Matrix, and the third part is about cross-validation.</p>
+<section id="advanced-classification-methods" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="advanced-classification-methods"><span class="header-section-number">7.1.1</span> Advanced classification methods</h3>
+<p>Classification methods include Pixel-Based Image Analysis and Object-Based Image Analysis. PBIA relies on the spectral properties of pixels for classification. “OBIA groups pixels into representative vector shapes with size and geometry” <span class="citation" data-cites="imagecl">(<a href="references.html#ref-imagecl" role="doc-biblioref"><span>“Image Classification Techniques in Remote Sensing,”</span> n.d.</a>)</span>, making classification results more spatially continuous. Sub-pixel analysis is a branch of PBIA, and it is used to solve the problem of pixel size that is bigger than the target object. I interpret the OBIA as a jigsaw puzzle that is in a high-resolution image, objects are composed of multiple pixels. Sub-pixel analysis is like a kind of colour palette that is in a low-resolution image, pixels are composed of multiple objects. Usually, OBIA is suitable for the high-quality classification of high-resolution images, and sub-pixel analysis applies to the mixed-pixel problem of low-resolution data. The following table will list how they are used.</p>
 <div class="cell" data-escape="false">
 <div class="cell-output-display">
 <table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
-<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">Correction</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">purposes /defination</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">methods</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">input data</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">output</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">Applications</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">Criteria</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">Object-Based Image Analysis (OBIA)</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">Spectral Mixture Analysis (SMA)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Geometric Correction</td>
-<td style="text-align: left;">Corrects distortions caused by the sensor or satellites to align the image with the geographic coordinate system, ensuring spatial accuracy.</td>
-<td style="text-align: left;">different transformation types(linear, polynomial, Helmert…)</td>
-<td style="text-align: left;">Pixel coordinates of the original image, GCPs（Ground Control Points, Pixel coordinates of the rectified (gold standard) map</td>
-<td style="text-align: left;">corrected image</td>
-<td style="text-align: left;">The basis for subsequent georectification and orthorectification</td>
+<td style="text-align: left;">Basic Unit</td>
+<td style="text-align: left;">Object (multiple pixels)</td>
+<td style="text-align: left;">Mixed pixel (one pixel contains multiple land cover types)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Atmospheric Correction</td>
-<td style="text-align: left;">Removal of environmental attenuation:Atmospheric scattering and Topographic attenuation</td>
-<td style="text-align: left;">DOS（Dark object subtraction, PIFs (Psuedo-invariant Features), Py6S, FLAASH, ACORN, QUAC, ATCOR Empirical Line Correction</td>
-<td style="text-align: left;">radiance reflected above the surface , Atmospheric attenuation</td>
-<td style="text-align: left;">Top-of-atmosphere reflectance and Surface reflectance</td>
-<td style="text-align: left;">Biophysical parameters required and the use of spectral signatures across time and space.</td>
+<td style="text-align: left;">Resolution</td>
+<td style="text-align: left;">High-resolution (UAV, WorldView)</td>
+<td style="text-align: left;">Low to medium resolution (MODIS, Landsat)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Orthorectification</td>
-<td style="text-align: left;">removing distortions. making the pixels viewed at the nadir (straight down)</td>
-<td style="text-align: left;">Cosine correction, Minnaert correction, Statistical Empirical correction, C Correction (advancing the Cosine)</td>
-<td style="text-align: left;">radiance, Sun's zenith angle, Sun's incidence angle slope angle (from DEM), slope aspect, solar zenith, solar azimuth</td>
-<td style="text-align: left;">geographically aligned and topography removed</td>
-<td style="text-align: left;">Orthorectification Is a subset of georectification, useful for Precise Georeferencing and High-Precision Measurement and Spatial Analysis</td>
+<td style="text-align: left;">Classification</td>
+<td style="text-align: left;">Machine learning (SVM, Decision Tree, KNN, Random Forest)</td>
+<td style="text-align: left;">Spectral unmixing (LSU, MESMA, V-I-S model)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Radiometric Calibration</td>
-<td style="text-align: left;">Converts the digital value (DN) of an image into a physical sense of radiant brightness or reflectance, eliminating the effects of sensors, light sources, etc.</td>
-<td style="text-align: left;">Lλ = Bias + (Gain * DN)</td>
-<td style="text-align: left;">DN, sensor information, Solar radiation information</td>
-<td style="text-align: left;">Corrected image</td>
-<td style="text-align: left;">Often used as a first step in data pre-processing to provide a basis for subsequent atmospheric corrections, etc.</td>
+<td style="text-align: left;">Features Used</td>
+<td style="text-align: left;">Spectral, spatial, shape-related (length-width ratio, edge length, compactness)</td>
+<td style="text-align: left;">Spectral only</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Main Methods</td>
+<td style="text-align: left;">Segmentation: SLIC, Watershed, Multi-resolution Segmentation</td>
+<td style="text-align: left;">Unmixing: Linear Spectral Unmixing (LSU), MESMA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Classification: SVM, Random Forest, Decision Tree, KNN</td>
+<td style="text-align: left;">Land Cover Fractions: V-I-S model</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Applications</td>
+<td style="text-align: left;">Urban classification, land cover mapping</td>
+<td style="text-align: left;">Mixed land cover analysis, vegetation fraction estimation</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Complexity</td>
+<td style="text-align: left;">High (segmentation + classification)</td>
+<td style="text-align: left;">Low (spectral analysis only)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Advantages</td>
+<td style="text-align: left;">High accuracy, noise reduction</td>
+<td style="text-align: left;">Estimates sub-pixel land cover proportions</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Limitations</td>
+<td style="text-align: left;">Requires segmentation, preprocessing</td>
+<td style="text-align: left;">Sensitive to endmember selection</td>
 </tr>
 </tbody>
 </table>
@@ -320,116 +300,162 @@ div.csl-indent {
 
 </div>
 </div>
-</section>
-<section id="joining-the-data" class="level3" data-number="3.1.2">
-<h3 data-number="3.1.2" class="anchored" data-anchor-id="joining-the-data"><span class="header-section-number">3.1.2</span> Joining the data</h3>
-<p>In some cases, we need to merge the images from different regions and times to cover the study area. We had better choose the image from the same day or else we need to standardise data. In remote sensing, it is called “Mosaicking”. This involves complex arithmetic processes: histogram matching algorithm feathering and blending. But it is simple in R just needs some time.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>m1 <span class="ot">&lt;-</span> terra<span class="sc">::</span><span class="fu">mosaic</span>(l83, l84, <span class="at">fun=</span><span class="st">"mean"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="image-enhancement" class="level3" data-number="3.1.3">
-<h3 data-number="3.1.3" class="anchored" data-anchor-id="image-enhancement"><span class="header-section-number">3.1.3</span> Image Enhancement</h3>
-<p>We choose the appropriate data, process it, and modify it to generate the desired output. The methods help us change the image and produce the output for our purpose. The methods are as follows.</p>
-<div class="cell" data-escape="false">
-<div class="cell-output-display">
-<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">Enhancement</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">purposes /defination</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">methods</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">input data</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">Advantages</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">Applicable scenarios</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Contrast Enhancement</td>
-<td style="text-align: left;">Improved visualisation of the image by widening the distribution of pixel values.</td>
-<td style="text-align: left;">Minimum- Maximum Percentage Linear and Standard Deviation Piecewise Linear Contrast Stretch</td>
-<td style="text-align: left;">Images with a narrow distributions</td>
-<td style="text-align: left;">Enhance images contrast and details</td>
-<td style="text-align: left;">pre-processing for subsequent classification and visual interpretation</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Band Ratioing</td>
-<td style="text-align: left;">Using the ratio of reflectance of different bands to highlight specific feature characteristics</td>
-<td style="text-align: left;">division operations (like NDVI, NDBI, tasselled cap etc.)</td>
-<td style="text-align: left;">Multi-spectral imagery</td>
-<td style="text-align: left;">Emphasis on relative differences in expression of feature characteristics</td>
-<td style="text-align: left;">Normalized Burn Ratio, The Normalised Difference Vegetation Index, the Normalized Difference Moisture Index (NDMI)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Filtering</td>
-<td style="text-align: left;">Suppressing noise or highlighting local variations through filter operations.</td>
-<td style="text-align: left;">Low pass or low frequency (averages the surrounding pixels)/High pass or high frequency-enhance local variations</td>
-<td style="text-align: left;">Original data</td>
-<td style="text-align: left;">Smooth or sharpen images; extract edge information as required</td>
-<td style="text-align: left;">Feature extraction, target detection</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">PCA</td>
-<td style="text-align: left;">Dimensionality reduction, removal of inter-band correlations, and extraction of most of the information in the image.</td>
-<td style="text-align: left;">In R this is prcomp() from the terra package</td>
-<td style="text-align: left;">Multi-spectral imagery</td>
-<td style="text-align: left;">Extracting the main direction of change reduces the computational burden and noise reduction</td>
-<td style="text-align: left;">Data compression, change detection, feature extraction</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Texture</td>
-<td style="text-align: left;">measuring the relationships between pixel-to-pixel, quantifying roughness to obtain feature characteristics.</td>
-<td style="text-align: left;">GLCM(Gray Level Co-occurrence Matrix ) second-order texture measures, third-order texture measures</td>
-<td style="text-align: left;">Grey-scale images or single-band data, windows</td>
-<td style="text-align: left;">Characterisation of feature texture, feature classification, target identification</td>
-<td style="text-align: left;">Land cover classification, target detection, environmental monitoring</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Fusion</td>
-<td style="text-align: left;">Fusion of data from different sensors or different times</td>
-<td style="text-align: left;">Pan-sharpening, Gram-Schmidt, IHS</td>
-<td style="text-align: left;">Multi-temporal, multi-sensor data</td>
-<td style="text-align: left;">enhance the details of the images</td>
-<td style="text-align: left;">High resolution data generate, changes detection, data integration</td>
-</tr>
-</tbody>
-</table>
-
-
-</div>
-</div>
-</section>
-</section>
-<section id="application" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="application"><span class="header-section-number">3.2</span> Application</h2>
-<p>Texture analysis is widely used as an image enhancement technique to improve classification accuracy by providing additional spatial information that spectral bands alone cannot capture.</p>
-<p>Dengsheng Lu <span class="citation" data-cites="lu2012a">Lu et al. (<a href="references.html#ref-lu2012a" role="doc-biblioref">2012</a>)</span> improved the identification of the Amazonian tropics by using texture fusion with multi-spectral images. By incorporating GLCM texture measures, classification accuracy improved in distinguishing dense forests from secondary vegetation. This demonstrates how texture-based enhancement refines image details and supports better feature extraction. However, some texture measure has high correlations with each other, leading to increased redundant information and possibly affecting classification stability. Although the author finally chose two measures, sifting through all the variables still requires a lot of computation.</p>
-<p>Which texture-measures combination from GLCM is most suitable for landscape identification? Mryka Hall-Beyer@hall-beyer2017b examines scenarios such as agricultural landscapes. Trying different texture measures in the identification of natural landscapes. Combining texture with the PCA method can filter the most representative texture features and improve computational efficiency. Certain texture features, such as Contrast and Correlation, are particularly effective in capturing spatial variations, while others, like Entropy, provide additional complexity. Different landscapes require different texture measures, as structural complexity varies across environments.<br>
-<img src="img/Texture_Analysis.png" id="fig1" class="img-fluid quarto-figure quarto-figure-center anchored" data-fig.align="center" width="500" alt="Texture measures Source: Remote Sensing for Dummies"></p>
-<p>Mryka Hall-Beyer <span class="citation" data-cites="hall-beyer2017buses">(<a href="references.html#ref-hall-beyer2017buses" role="doc-biblioref"><strong>hall-beyer2017buses?</strong></a>)</span> PCA to help with filtering texture measures. Reduced workload in identifying natural landscapes for future research. However, this research only discusses the different groups of texture measures that will bring different influences for the results. It does not mention the influences of resolution and window sizes. Smaller windows are more effective for detecting fine-scale features, while larger windows enhance broader landscape classification, making window selection an important factor in image enhancement. So, in the future, research can focus on the different window sizes for different-resolution images. This will improve the applicability of the texture method at different spatial scales. Now, texture is usually used for natural landscapes like forests. But Ent can detect unnatural edges well. So texture is also important for urban land use identification. For example, Fatemeh <span class="citation" data-cites="tabibmahmoudi2019a">Tabib Mahmoudi, Arabsaeedi, and Alavipanah (<a href="references.html#ref-tabibmahmoudi2019a" role="doc-biblioref">2019</a>)</span> introduced entropy, contrast, correlation and mean for urban object recognition. In the future there could be more research on applying texture in complex scenarios like cities. Future research should explore integrating texture-based enhancement with other image correction techniques, such as radiometric correction, to improve classification robustness across varying imaging conditions.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/texture.png" class="img-fluid figure-img" data-fig.align="center" width="500"></p>
-<figcaption>Different texture measures visual appearance Source:</figcaption>
+<p><img src="img/pbiaobia.jpg" class="img-fluid figure-img" width="500"></p>
+<figcaption>PBIA vs OBIA Source: [GISgeography](https://gisgeography.com/image-classification-techniques-remote-sensing/)</figcaption>
 </figure>
 </div>
 </section>
-<section id="reflection" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3.3</span> Reflection</h2>
-<p>This week we learned Correction, Mosaicking, and image enhancement. We usually comprehend different methods and concepts separately during the learning process. (But the content this week is still hard for me.) In practice, for different bands and spatial resolutions, the effects of the different methods are also different, so it is necessary to combine various methods to realise the purpose of the study. For example, when doing principal component analysis (PCA) on spectral data, the subsequent eigenchannels usually represent indexes like NDVI (vegetation) mentioned in the band ratio.<span class="citation" data-cites="hall-beyer2017a">(<a href="references.html#ref-hall-beyer2017a" role="doc-biblioref">Hall-Beyer 2017</a>)</span> This suggests that there may be a relationship of complementarity between the different approaches. In addition, in order to get more clearer images and results, researchers often combine different sensor data and methods of analysis.</p>
-<p>The enhancement method——Texture, currently applies to natural landscape identification such as forests. But I think it can also used in small-scale urban identification because Ent is sensitive to unnatural edges and can be used to identify artificial landscapes. What’s more, compared with popular Spectroscopic methods, Texture methods (e.g.&nbsp;GLCM) focus on the spatial pattern of the image and may reduce the band radiometric errors due to temperature variation caused by the city heat island effect. However, texture can only be used for enlarged objects due to its large computation and the edges of the city are especially complex, which limits its ability to complement other methods in many situations. I believe addressing this limitation could be an important direction for future research, particularly through deep learning-based feature extraction. Automated texture analysis could reduce computational demands and improve classification efficiency, making it more applicable to urban studies. In specific applications, texture features might be beneficial for urban planning, by accurately identifying traffic-congested road sections based on density variations.</p>
+<section id="accuracy" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="accuracy"><span class="header-section-number">7.1.2</span> Accuracy</h3>
+<p>Based on the error matrix, there are many indexes and ways to measure the accuracy of the classification results. I think this part can be understood in steps. Basically, the accuracy is calculated by the error matrix with the overall accuracy, user accuracy, and producer accuracy. These methods can measure most situations but may be incorrect on data with unevenly distributed categories. The Kappa coefficient can solve this problem to some extent. But when there is an extreme imbalance in the distribution of a category, it will still overestimate model performance. <span class="citation" data-cites="comber2012">(<a href="references.html#ref-comber2012" role="doc-biblioref">Comber et al. 2012</a>)</span> F1 and ROC curves can also help with measuring model accuracy, ROC is more accurate.</p>
+<div class="cell" data-escape="false">
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">Term</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">Definition</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">Formula / Key Info</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Overall Accuracy (OA)</td>
+<td style="text-align: left;">Percentage of correctly classified samples among all samples.</td>
+<td style="text-align: left;">TP + TN / (TP + FP + FN + TN)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Producer’s Accuracy (PA)</td>
+<td style="text-align: left;">Probability that a real land cover class is correctly classified.</td>
+<td style="text-align: left;">TP / (TP + FN)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">User’s Accuracy (UA)</td>
+<td style="text-align: left;">Probability that a predicted class is actually correct.</td>
+<td style="text-align: left;">TP / (TP + FP)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Omission Error</td>
+<td style="text-align: left;">How often a real class is missed.</td>
+<td style="text-align: left;">FN / (TP + FN)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Commission Error</td>
+<td style="text-align: left;">How often a predicted class is incorrect.</td>
+<td style="text-align: left;">FP / (TP + FP)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Kappa Coefficient (Kappa, κ)</td>
+<td style="text-align: left;">Measures agreement between predicted and actual classes, adjusting for chance agreement.</td>
+<td style="text-align: left;">κ = (p_o - p_e) / (1 - p_e), where p_o is observed accuracy, p_e is expected accuracy.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">F1-Score</td>
+<td style="text-align: left;">Harmonic mean of precision and recall, balancing both metrics.</td>
+<td style="text-align: left;">2 × (Precision × Recall) / (Precision + Recall)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Confusion Matrix</td>
+<td style="text-align: left;">A table showing actual vs. predicted classifications, used to compute accuracy metrics.</td>
+<td style="text-align: left;">Contains TP, FP, FN, TN values.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">True Positive (TP)</td>
+<td style="text-align: left;">Correctly classified positive cases.</td>
+<td style="text-align: left;">Example: Correctly classified urban areas.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">False Positive (FP)</td>
+<td style="text-align: left;">Incorrectly classified positive cases.</td>
+<td style="text-align: left;">Example: A forest misclassified as urban.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">True Negative (TN)</td>
+<td style="text-align: left;">Correctly classified negative cases.</td>
+<td style="text-align: left;">Example: Correctly classified non-urban areas.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">False Negative (FN)</td>
+<td style="text-align: left;">Incorrectly classified negative cases.</td>
+<td style="text-align: left;">Example: An urban area misclassified as non-urban.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cross Validation (CV)</td>
+<td style="text-align: left;">Splitting data into training and validation sets to evaluate model performance.</td>
+<td style="text-align: left;">Common methods: K-Fold, Leave-One-Out (LOO), Spatial CV.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">K-Fold Cross Validation</td>
+<td style="text-align: left;">Divides data into K groups, using each fold as a test set once.</td>
+<td style="text-align: left;">Common choices: 5-Fold, 10-Fold.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Spatial Cross Validation</td>
+<td style="text-align: left;">Ensures training and test data are spatially separated to avoid overfitting.</td>
+<td style="text-align: left;">Uses spatial partitioning (e.g., K-Means, Voronoi).</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</section>
+<section id="cross-validation" class="level3" data-number="7.1.3">
+<h3 data-number="7.1.3" class="anchored" data-anchor-id="cross-validation"><span class="header-section-number">7.1.3</span> Cross-validation</h3>
+<p>Image classification can be viewed as a complete process of machine learning, so it can use cross-validation in ML. Data is divided into a training set and a test set to test the accuracy of the model. However, remote sensing is specific because neighbouring pixels may have a spatial correlation. So, using regular methods will give the false belief that the model is too accurate.</p>
+</section>
+</section>
+<section id="application" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="application"><span class="header-section-number">7.2</span> Application</h2>
+<p>The differences between PBIA and OBIA arise from two articles on the classification of agricultural landscapes. Duro@duro2012a utilised a moderate-resolution image (10m) to identify Canada’s agricultural landscape, which includes cropland, grassland, soil, and wetland. A comparison of the results of PBIA and OBIA was conducted using three classification methods (DT, SVM, and RF), showing no significant differences (p &gt; 0.05). Wetlands are an exception; OBIA performs more accurately than PBIA in this regard, which may be attributed to the unique characteristics of wetlands. Wetlands comprise water bodies, vegetation, bare ground, and organic sediments. These components create a single pixel of spectral information that can be influenced by various factors. Additionally, the gradual blurring and complex boundaries of wetlands complicate their identification through pixel analysis. OBIA can integrate neighbouring pixels, thus providing a more generalised visual appearance and a more continuous description of land cover.</p>
+<div class="grid">
+<div class="g-col-6">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/CA_cla2.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>PBIA RF Source: <span class="citation" data-cites="duro2012a">Duro, Franklin, and Dubé (<a href="references.html#ref-duro2012a" role="doc-biblioref">2012</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+<div class="g-col-6">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/Ca_cla1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>OBIA RF Source: <span class="citation" data-cites="duro2012a">Duro, Franklin, and Dubé (<a href="references.html#ref-duro2012a" role="doc-biblioref">2012</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Castillejo-González@castillejo-gonzález2009 concluded that OBIA achieved higher accuracy than PBIA in identifying agricultural landscapes. The reasons are as follows: First, the resolution of the image is higher (3m). Second, the agricultural landscapes are more carefully categorised. It not only includes bare soil and cropland but also divides cropland into olive orchards, vineyards and sunflower fields. So, it has higher requirements for classification accuracy. Third, the classification methods employed by the author are traditional approaches, including MD, MC and SAM, unlike Duro, who used machine learning methods. Finally, for measuring accuracy, Elsevier used the kappa coefficients, which may lead to some errors in the results due to the uneven distribution of the categories. However, Dennis used spatial cross-validation k-fold, which is more suitable for remote sensing data classification.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/It_cla.png" class="img-fluid figure-img" width="500"></p>
+<figcaption>PBIA vs OBIA :<span class="citation" data-cites="castillejo-gonzález2009">Castillejo-González et al. (<a href="references.html#ref-castillejo-gonzález2009" role="doc-biblioref">2009</a>)</span></figcaption>
+</figure>
+</div>
+<p>In summary, for most open-source data today, PBIA and OBIA using machine learning will produce similar results. However. CNNs are able to automatically learn more complex spatial features through convolutional operations and the information from surrounding pixels. That advanced algorithm fills the gap between PBIA and OBIA. However, OBIA requires more computing power and time because of image segmentation. I think that in general situations, PBIA using ML methods is enough for most image classification missions with high efficiency. OBIA can be used for heterogeneous landscapes with unclear boundaries, like wetlands. Now, there are many studies that combine PBIA and OBIA together.</p>
+</section>
+<section id="reflection" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.3</span> Reflection</h2>
+<p>Comparing PBIA and OBIA, I have not only observed that different methods produce different analyses for different resolutions of data but also recognized the importance of balancing computational cost and accuracy. Machine learning methods are especially used for image classification. The balance between effectiveness and accuracy is also important for Policy implementation. For example, is OBIA combined with simple machine learning methods, such as Random Forest (RF), better than PBIA combined with deep learning (CNN) for the same object classification task? This question confuses me. What is the appropriate trade-off between the cost and accuracy of classification of these two methods? In the future, There may be more ways to effectively combine PBIA and OBIA. These methods are now widely used in environmental monitoring, urban planning, and agricultural mapping. Moreover, because the authors use different methods to measure the accuracy of classification, their results need to be further verified. Did the author use cross-validation or Kappa? What is the specific error matrix for the classification model? Does the author consider spatial autocorrelation? The distribution of classifications also requires attention; do the prediction results have an uneven distribution? We should be careful when we read articles. The result in a high OA does not mean the categorisation is good.</p>
+<p>I find this content really interesting because it emphasizes the limitations of classification techniques in applications, perhaps through hybrid models that combine their strengths. In the future, improving accuracy measuring context more effectively could enhance the reliability of classification results. This reflection has made me more aware of the complexity of classification methodologies and the need for careful evaluation when applying them to geospatial problems, particularly in fields where policy decisions rely on accurate spatial analysis.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-hall-beyer2017a" class="csl-entry" role="listitem">
-Hall-Beyer, Mryka. 2017. <span>“Practical Guidelines for Choosing GLCM Textures to Use in Landscape Classification Tasks over a Range of Moderate Spatial Scales.”</span> <em>International Journal of Remote Sensing</em> 38 (5): 1312–38. <a href="https://doi.org/10.1080/01431161.2016.1278314">https://doi.org/10.1080/01431161.2016.1278314</a>.
+<div id="ref-castillejo-gonzález2009" class="csl-entry" role="listitem">
+Castillejo-González, Isabel Luisa, Francisca López-Granados, Alfonso García-Ferrer, José Manuel Peña-Barragán, Montserrat Jurado-Expósito, Manuel Sánchez De La Orden, and María González-Audicana. 2009. <span>“Object- and Pixel-Based Analysis for Mapping Crops and Their Agro-Environmental Associated Measures Using QuickBird Imagery.”</span> <em>Computers and Electronics in Agriculture</em> 68 (2): 207–15. <a href="https://doi.org/10.1016/j.compag.2009.06.004">https://doi.org/10.1016/j.compag.2009.06.004</a>.
 </div>
-<div id="ref-lu2012a" class="csl-entry" role="listitem">
-Lu, Dengsheng, Mateus Batistella, Guiying Li, Emilio Moran, Scott Hetrick, Corina Da Costa Freitas, Luciano Vieira Dutra, and Sidnei João Siqueira Sant’Anna. 2012. <span>“Land Use/Cover Classification in the Brazilian Amazon Using Satellite Images.”</span> <em>Pesquisa Agropecuária Brasileira</em> 47 (9): 1185–1208. <a href="https://doi.org/10.1590/S0100-204X2012000900004">https://doi.org/10.1590/S0100-204X2012000900004</a>.
+<div id="ref-comber2012" class="csl-entry" role="listitem">
+Comber, Alexis, Peter Fisher, Chris Brunsdon, and Abdulhakim Khmag. 2012. <span>“Spatial analysis of remote sensing image classification accuracy遥感影像分类精度的空间分析.”</span> <em>Remote Sensing of Environment</em> 127 (December): 237–46. <a href="https://doi.org/10.1016/j.rse.2012.09.005">https://doi.org/10.1016/j.rse.2012.09.005</a>.
 </div>
-<div id="ref-tabibmahmoudi2019a" class="csl-entry" role="listitem">
-Tabib Mahmoudi, Fatemeh, Alireza Arabsaeedi, and Seyed Kazem Alavipanah. 2019. <span>“Feature-Level Fusion of Landsat 8 Data and SAR Texture Images for Urban Land Cover Classification.”</span> <em>Journal of the Indian Society of Remote Sensing</em> 47 (3): 479–85. <a href="https://doi.org/10.1007/s12524-018-0914-8">https://doi.org/10.1007/s12524-018-0914-8</a>.
+<div id="ref-duro2012a" class="csl-entry" role="listitem">
+Duro, Dennis C., Steven E. Franklin, and Monique G. Dubé. 2012. <span>“A Comparison of Pixel-Based and Object-Based Image Analysis with Selected Machine Learning Algorithms for the Classification of Agricultural Landscapes Using SPOT-5 HRG Imagery.”</span> <em>Remote Sensing of Environment</em> 118 (March): 259–72. <a href="https://doi.org/10.1016/j.rse.2011.11.020">https://doi.org/10.1016/j.rse.2011.11.020</a>.
+</div>
+<div id="ref-imagecl" class="csl-entry" role="listitem">
+<span>“Image Classification Techniques in Remote Sensing.”</span> n.d. <a href="https://gisgeography.com/image-classification-techniques-remote-sensing/">https://gisgeography.com/image-classification-techniques-remote-sensing/</a>.
 </div>
 </div>
 </section>
@@ -854,13 +880,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./Wk2_Presentation.html" class="pagination-link" aria-label="Xaringan Presentation">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Xaringan Presentation</span></span>
+      <a href="./Wk7_Clas1.html" class="pagination-link" aria-label="Classification Ⅰ">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification Ⅰ</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Wk4_Policy.html" class="pagination-link" aria-label="Policy">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
