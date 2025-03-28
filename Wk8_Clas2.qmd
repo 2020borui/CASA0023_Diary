@@ -36,23 +36,6 @@ read_excel(here("tables", "OBIA_vs_SMA.xlsx")) %>%
 
 Based on the error matrix, there are many indexes and ways to measure the accuracy of the classification results. I think this part can be understood in multi-levels. Basically, the accuracy is calculated by the error matrix with the overall accuracy, user accuracy, and producer accuracy. These methods can measure most situations but may be incorrect on data with unevenly distributed categories. The Kappa coefficient can solve this problem to some extent. But when there is an extreme imbalance in the distribution of a category, it will still overestimate model performance. [@comber2012] F1 and ROC curves can also help with measuring model accuracy.
 
-```{r echo=FALSE,warning=FALSE, message=FALSE,escape = FALSE}
-library(dplyr)
-library(tidyverse)
-library(kableExtra)
-library(readr)
-library(here)
-library(knitr)
-library(kableExtra)
-library(readxl)
-library(fs)
-
-#read in data
-read_excel(here("tables", "accuracy_assessment_terms.xlsx")) %>%
-  knitr::kable(booktabs = TRUE,format = "html",caption = "Terms related to accuracy assessment") %>%
-  kable_styling(position = "center", fixed_thead = TRUE, latex_options ="scale_down" ) %>%
-  row_spec(0, bold = TRUE)
-```
 
 ### Cross-validation
 
