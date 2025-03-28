@@ -15,6 +15,7 @@ book:
     - Wk6_GEE.qmd
     - Wk7_Clas1.qmd
     - Wk8_Clas2.qmd
+    - Wk9_SAR.qmd
     - references.qmd
 
 bibliography: references.bib

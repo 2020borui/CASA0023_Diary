@@ -1,0 +1,10 @@
+Enhancement,purposes /defination,methods,input data,Advantages,Applicable scenarios
+Contrast Enhancement,Improved visualisation of the image by widening the distribution of pixel values.,"Minimum- Maximum
+Percentage Linear and Standard Deviation
+Piecewise Linear Contrast Stretch",Images with a narrow distributions,Enhance images contrast and details,pre-processing for subsequent classification and visual interpretation
+Band Ratioing,Using the ratio of reflectance of different bands to highlight specific feature characteristics,"division operations (like NDVI, NDBI, tasselled cap etc.)",Multi-spectral imagery,Emphasis on relative differences in expression of feature characteristics,"Normalized Burn Ratio, The Normalised Difference Vegetation Index, the Normalized Difference Moisture Index (NDMI)"
+Filtering,Suppressing noise or highlighting local variations through filter operations.,Low pass or low frequency (averages the surrounding pixels)/High pass or high frequency-enhance local variations,Original data,Smooth or sharpen images; extract edge information as required,"Feature extraction, target detection"
+PCA,"Dimensionality reduction, removal of inter-band correlations, and extraction of most of the information in the image.",In R this is prcomp() from the terra package,Multi-spectral imagery,Extracting the main direction of change reduces the computational burden and noise reduction,"Data compression, change detection, feature extraction"
+Texture,"measuring the relationships between pixel-to-pixel, quantifying roughness to obtain feature characteristics."," GLCM(Gray Level Co-occurrence Matrix )
+ second-order texture measures,  third-order texture measures","Grey-scale images or single-band data, windows","Characterisation of feature texture, feature classification, target identification","Land cover classification, target detection, environmental monitoring"
+Fusion,Fusion of data from different sensors or different times ,"Pan-sharpening, Gram-Schmidt, IHS","Multi-temporal, multi-sensor data",enhance the details of the images,"High resolution data generate, changes detection, data integration"
