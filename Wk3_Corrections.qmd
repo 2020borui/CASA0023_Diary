@@ -12,8 +12,6 @@ The lecture includes two parts: Correcting data and Accessing data. This is prep
 
 The correction makes the raw remote-sensing data become "Analysis Ready Data"(ARD). In this lecture, we mainly learn four kinds of correction: Geometric Correction, Atmospheric Correction, Orthorectification, and Radiometric Correction. I try to figure out the connection between them to have a better understanding. It seems like the Radiometric correction and atmospheric correction are the most common correction steps in remote sensing data processing, and are usually required for every image. Geometric Correction and Orthorectification are commonly used processing scenarios where spatial aberrations exist or where accurate spatial analysis is required, not every data is needed. The following table will introduce details about different corrections. Regression is important in correction methods.
 
-Surface reflectance is the result of radiative and atmospheric corrections. In practice, we get the reflectance from DN (level 1) through DOS methods. Nowadays there are many ways to get processed data like Landsat8 (level 2-surface reflectance). This data has been atmospherically corrected. Saves a lot of work. But in the future, there will be some chance to handle high-resolution images that have not been processed. It is still important to know how to correct it and how to tackle problems like aberrations. We should download the data that fits our needs. Using Landsat data as an example, the hierarchical structure of Landsat data is Collection→ Level→ Tier. In general, we choose Collection 2 + Level-2 + Tier 1.
-
 ```{r echo=FALSE,warning=FALSE, message=FALSE,escape = FALSE}
 library(dplyr)
 library(tidyverse)
