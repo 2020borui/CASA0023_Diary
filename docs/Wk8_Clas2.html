@@ -50,7 +50,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./Wk9_SAR.html" rel="next">
 <link href="./Wk7_Clas1.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -151,7 +151,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Wk3_Corrections.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Enhancement</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Enhancements</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -176,6 +176,12 @@ div.csl-indent {
   <div class="sidebar-item-container"> 
   <a href="./Wk8_Clas2.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification Ⅱ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Wk9_SAR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Syntactic Aperture Radar</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -236,11 +242,12 @@ div.csl-indent {
 <div class="cell" data-escape="false">
 <div class="cell-output-display">
 <table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<caption>OBIA vs Sub-pixel analysis</caption>
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">Criteria</th>
 <th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">Object-Based Image Analysis (OBIA)</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">Spectral Mixture Analysis (SMA)</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">Sub-pixel Analysis</th>
 </tr>
 </thead>
 <tbody>
@@ -270,7 +277,7 @@ div.csl-indent {
 <td style="text-align: left;">Unmixing: Linear Spectral Unmixing (LSU), MESMA</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Model</td>
 <td style="text-align: left;">Classification: SVM, Random Forest, Decision Tree, KNN</td>
 <td style="text-align: left;">Land Cover Fractions: V-I-S model</td>
 </tr>
@@ -303,16 +310,17 @@ div.csl-indent {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/pbiaobia.jpg" class="img-fluid figure-img" width="500"></p>
-<figcaption>PBIA vs OBIA Source: [GISgeography](https://gisgeography.com/image-classification-techniques-remote-sensing/)</figcaption>
+<figcaption>PBIA vs OBIA Source: <a href="https://gisgeography.com/image-classification-techniques-remote-sensing/">GISgeography</a></figcaption>
 </figure>
 </div>
 </section>
 <section id="accuracy" class="level3" data-number="7.1.2">
 <h3 data-number="7.1.2" class="anchored" data-anchor-id="accuracy"><span class="header-section-number">7.1.2</span> Accuracy</h3>
-<p>Based on the error matrix, there are many indexes and ways to measure the accuracy of the classification results. I think this part can be understood in steps. Basically, the accuracy is calculated by the error matrix with the overall accuracy, user accuracy, and producer accuracy. These methods can measure most situations but may be incorrect on data with unevenly distributed categories. The Kappa coefficient can solve this problem to some extent. But when there is an extreme imbalance in the distribution of a category, it will still overestimate model performance. <span class="citation" data-cites="comber2012">(<a href="references.html#ref-comber2012" role="doc-biblioref">Comber et al. 2012</a>)</span> F1 and ROC curves can also help with measuring model accuracy, ROC is more accurate.</p>
+<p>Based on the error matrix, there are many indexes and ways to measure the accuracy of the classification results. I think this part can be understood in multi-levels. Basically, the accuracy is calculated by the error matrix with the overall accuracy, user accuracy, and producer accuracy. These methods can measure most situations but may be incorrect on data with unevenly distributed categories. The Kappa coefficient can solve this problem to some extent. But when there is an extreme imbalance in the distribution of a category, it will still overestimate model performance. <span class="citation" data-cites="comber2012">(<a href="references.html#ref-comber2012" role="doc-biblioref">Comber et al. 2012</a>)</span> F1 and ROC curves can also help with measuring model accuracy.</p>
 <div class="cell" data-escape="false">
 <div class="cell-output-display">
 <table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<caption>Terms related to accuracy assessment</caption>
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">Term</th>
@@ -405,12 +413,12 @@ div.csl-indent {
 </section>
 <section id="cross-validation" class="level3" data-number="7.1.3">
 <h3 data-number="7.1.3" class="anchored" data-anchor-id="cross-validation"><span class="header-section-number">7.1.3</span> Cross-validation</h3>
-<p>Image classification can be viewed as a complete process of machine learning, so it can use cross-validation in ML. Data is divided into a training set and a test set to test the accuracy of the model. However, remote sensing is specific because neighbouring pixels may have a spatial correlation. So, using regular methods will give the false belief that the model is too accurate.</p>
+<p>Image classification can be viewed as a complete process of machine learning, so it can use cross-validation to test the accuracy of the model. However, remote sensing is special because neighbouring pixels may have a spatial correlation. So, using regular methods will give the false belief that the model is too accurate. Spatial cross-validation can accurately assess the accuracy of image classification.</p>
 </section>
 </section>
 <section id="application" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="application"><span class="header-section-number">7.2</span> Application</h2>
-<p>The differences between PBIA and OBIA arise from two articles on the classification of agricultural landscapes. Duro@duro2012a utilised a moderate-resolution image (10m) to identify Canada’s agricultural landscape, which includes cropland, grassland, soil, and wetland. A comparison of the results of PBIA and OBIA was conducted using three classification methods (DT, SVM, and RF), showing no significant differences (p &gt; 0.05). Wetlands are an exception; OBIA performs more accurately than PBIA in this regard, which may be attributed to the unique characteristics of wetlands. Wetlands comprise water bodies, vegetation, bare ground, and organic sediments. These components create a single pixel of spectral information that can be influenced by various factors. Additionally, the gradual blurring and complex boundaries of wetlands complicate their identification through pixel analysis. OBIA can integrate neighbouring pixels, thus providing a more generalised visual appearance and a more continuous description of land cover.</p>
+<p>This week we compared the differences between PBIA and OBIA through two articles on agricultural landscape classification. <span class="citation" data-cites="duro2012a">Duro, Franklin, and Dubé (<a href="references.html#ref-duro2012a" role="doc-biblioref">2012</a>)</span> utilised a moderate-resolution image (10m) to identify Canada’s agricultural landscape, which includes cropland, grassland, soil, and wetland. A comparison of the results of PBIA and OBIA was conducted using three classification methods (DT, SVM, and RF), showing no significant differences (p &gt; 0.05). Wetlands are an exception: OBIA performs more accurately than PBIA in wetland identification, possibly due to the unique characteristics of wetlands. The gradual blurring and complex boundaries of wetlands make their identification challenging through pixel-based analysis. In contrast, OBIA can integrate neighboring pixels, providing a more generalized visual appearance and a more continuous description of land cover.As a result OBIA is more accurate in identifying wetlands.</p>
 <div class="grid">
 <div class="g-col-6">
 <div class="quarto-figure quarto-figure-center">
@@ -429,19 +437,19 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>Castillejo-González@castillejo-gonzález2009 concluded that OBIA achieved higher accuracy than PBIA in identifying agricultural landscapes. The reasons are as follows: First, the resolution of the image is higher (3m). Second, the agricultural landscapes are more carefully categorised. It not only includes bare soil and cropland but also divides cropland into olive orchards, vineyards and sunflower fields. So, it has higher requirements for classification accuracy. Third, the classification methods employed by the author are traditional approaches, including MD, MC and SAM, unlike Duro, who used machine learning methods. Finally, for measuring accuracy, Elsevier used the kappa coefficients, which may lead to some errors in the results due to the uneven distribution of the categories. However, Dennis used spatial cross-validation k-fold, which is more suitable for remote sensing data classification.</p>
+<p><span class="citation" data-cites="castillejo-gonzález2009">Castillejo-González et al. (<a href="references.html#ref-castillejo-gonzález2009" role="doc-biblioref">2009</a>)</span> concluded that OBIA achieved higher accuracy than PBIA in identifying agricultural landscapes. The reasons for the different conclusions may be because: First, the resolution of the image is higher (3m). Second, the agricultural landscapes are more carefully categorised. It not only includes bare soil and cropland but also divides cropland into olive orchards, vineyards and sunflower fields. So, it has higher requirements for classification accuracy. Third, the classification methods employed by the author are traditional approaches, including MD, MC and SAM, unlike Duro, who used machine learning methods. Finally, for measuring accuracy, Castillejo-González used the kappa coefficients, which may lead to some errors in the results due to the uneven distribution of the categories. However, Duro used spatial cross-validation k-fold, which is more suitable for remote sensing data.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/It_cla.png" class="img-fluid figure-img" width="500"></p>
 <figcaption>PBIA vs OBIA :<span class="citation" data-cites="castillejo-gonzález2009">Castillejo-González et al. (<a href="references.html#ref-castillejo-gonzález2009" role="doc-biblioref">2009</a>)</span></figcaption>
 </figure>
 </div>
-<p>In summary, for most open-source data today, PBIA and OBIA using machine learning will produce similar results. However. CNNs are able to automatically learn more complex spatial features through convolutional operations and the information from surrounding pixels. That advanced algorithm fills the gap between PBIA and OBIA. However, OBIA requires more computing power and time because of image segmentation. I think that in general situations, PBIA using ML methods is enough for most image classification missions with high efficiency. OBIA can be used for heterogeneous landscapes with unclear boundaries, like wetlands. Now, there are many studies that combine PBIA and OBIA together.</p>
+<p>In summary, for most open-source data today, both PBIA and OBIA, when applied with machine learning, will produce similar results. However. CNNs are able to automatically learn more complex spatial features through convolutional operations and the information from surrounding pixels. That advanced algorithm bridges the gap between PBIA and OBIA. OBIA requires more computing power and time because of image segmentation. I think that in general situations, PBIA using ML methods is enough for most image classification missions with high efficiency. OBIA can be used for heterogeneous landscapes with unclear boundaries, like wetlands. Now, there are many studies that combine PBIA and OBIA together.</p>
 </section>
 <section id="reflection" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.3</span> Reflection</h2>
-<p>Comparing PBIA and OBIA, I have not only observed that different methods produce different analyses for different resolutions of data but also recognized the importance of balancing computational cost and accuracy. Machine learning methods are especially used for image classification. The balance between effectiveness and accuracy is also important for Policy implementation. For example, is OBIA combined with simple machine learning methods, such as Random Forest (RF), better than PBIA combined with deep learning (CNN) for the same object classification task? This question confuses me. What is the appropriate trade-off between the cost and accuracy of classification of these two methods? In the future, There may be more ways to effectively combine PBIA and OBIA. These methods are now widely used in environmental monitoring, urban planning, and agricultural mapping. Moreover, because the authors use different methods to measure the accuracy of classification, their results need to be further verified. Did the author use cross-validation or Kappa? What is the specific error matrix for the classification model? Does the author consider spatial autocorrelation? The distribution of classifications also requires attention; do the prediction results have an uneven distribution? We should be careful when we read articles. The result in a high OA does not mean the categorisation is good.</p>
-<p>I find this content really interesting because it emphasizes the limitations of classification techniques in applications, perhaps through hybrid models that combine their strengths. In the future, improving accuracy measuring context more effectively could enhance the reliability of classification results. This reflection has made me more aware of the complexity of classification methodologies and the need for careful evaluation when applying them to geospatial problems, particularly in fields where policy decisions rely on accurate spatial analysis.</p>
+<p>In comparing PBIA and OBIA, I have observed that different methods yield different results depending on the data resolution. Additionally, I have recognized the importance of balancing computational cost with accuracy. Machine learning methods, in particular, are widely used for image classification. Achieving a balance between effectiveness and accuracy is also crucial for policy implementation. For example, is OBIA combined with simple machine learning methods, such as Random Forest (RF), better than PBIA combined with deep learning (CNN) for the same object classification task? This question confuses me. What is the appropriate trade-off between the cost and accuracy of classification of these two methods? In the future, There may be more ways to effectively combine PBIA and OBIA. These methods will widely be used in environmental monitoring, urban planning, and agricultural mapping. Moreover, because the authors use different methods to measure the accuracy of classification, their results need to be further verified. Did the author use cross-validation or Kappa? What is the specific error matrix for the classification model? Does the author consider spatial autocorrelation? The distribution of classifications also requires attention; do the prediction results have an uneven distribution? We should be careful when we read articles. The result in a high OA does not mean the categorisation is good.</p>
+<p>I find this content really interesting because it emphasizes the limitations of classification techniques in applications, perhaps through hybrid models that combine their strengths. In the future, improving methods for assessing the accuracy of remote sensing classification could enhance the credibility of research findings. This reflection has made me more aware of the complexity of classification methodologies and the need for careful evaluation when applying them to geospatial problems, particularly in fields where policy decisions rely on accurate spatial analysis.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
@@ -885,8 +893,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Wk9_SAR.html" class="pagination-link" aria-label="Syntactic Aperture Radar">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Syntactic Aperture Radar</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

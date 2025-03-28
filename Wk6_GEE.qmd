@@ -14,11 +14,11 @@ Google Earth Engine(GEE) can access and tackle Geographic information data quick
 
 2.  GEE can access and deal with large-scale data, especially global remote sensing data. As a cloud-based platform, it is easy for researchers to disseminate their results to others, making the project more reproducible. No need to upload local files to GitHub (which has a size limit, and most remote sensing images can't be uploaded) to share the results as before.\
 
-```{r, echo=FALSE, fig.align='center', out.width="300px", out.height="300px",fig.cap="Github limitation"}
+```{r, echo=FALSE, fig.align='center', out.width="300px", out.height="300px",fig.cap="Github limitation(chatgpt generated)"}
 knitr::include_graphics("img/wk6_cat.png")
 ```
 
-This process uses a pyramid of downsampled tiles, reducing the image to multiple scales until it reaches 256 × 256 pixels per tile. Making the processing more efficient. Here, I use the image and the example of LandSat with 30m resolution to help me understand it.
+Large-scale dataset storage loading process uses a pyramid of downsampled tiles, reducing the image to multiple scales until it reaches 256 × 256 pixels per tile. Making the processing more efficient. Here, I use the image and the example of LandSat with 30m resolution to help me understand it.
 
 ![Resolution Pyramid Source: GEE](img/pyramid.jpg){fig-align="center"}
 
@@ -37,7 +37,7 @@ library(fs)
 
 #read in data
 read_excel(here("tables", "table6.xlsx")) %>%
-  knitr::kable(booktabs = TRUE,format = "html") %>%
+  knitr::kable(booktabs = TRUE,format = "html", caption = 'The differences between GEE and R') %>%
   kable_styling(position = "center", fixed_thead = TRUE, latex_options = "scale_down") %>%
   row_spec(0, bold = TRUE)
 ```
@@ -48,15 +48,16 @@ GEE is used in a variety of study areas like global forest change, crop yield es
 
 ## Application
 
-I have explored what influence the data from different sensors would have on the analysis of crop yield estimation. This week, I want to focus on the impact of analyses of GEE. I conclude two articles to make comparisons, both of them using a vegetation index to set up a random forest model to predict the crop yield. But one of them used GEE to analyse, the other used traditional methods.
+In week one, I have explored what influence the data from different sensors would have on the analysis of crop yield estimation. This week, I want to focus on the difference of analyses of GEE. I conclude two articles to make comparisons, both of them using a vegetation index to set up a random forest model to predict the crop yield. But one of them used GEE to analyse, the other used traditional methods.
 
 1.  The role of GEE in data processing
 
-Choudhary et al. @choudhary2022 are using GEE to remove all errors and get similar weight to tackle the data quickly. These steps help quickly access multi-temporal Sentinel-2 data and reduce the time to deal with data. But GEE data tackling may ignore the unusual weather or special local terrain, which may reduce the prediction accuracy. Hunt et al. @hunt2019 did data pre-processing manually (like using a buffer to remove gaps from data cleaning), selecting a date image with fewer clouds and using a Sen2Cor processor to correct data, improving the quality of input data, so the model performances are more consistent.
+@choudhary2022 used GEE to remove all errors and get similar weight to tackle the data quickly. These steps help quickly access multi-temporal Sentinel-2 data and reduce the time to deal with data. But GEE data tackling may ignore the unusual weather or special local terrain, which may reduce the prediction accuracy. Hunt et al. @hunt2019 did data pre-processing manually (like using a buffer to remove gaps from data cleaning), selecting a date image with fewer clouds and using a Sen2Cor processor to correct data, improving the quality of input data, so the model performances are better.
 
 2.  Performance of random forests in GEE and non-GEE environments
 
-Hunt et al. @hunt2019 using different combinations of data( meteorological, terrain, and soil moisture content) to improve the RF model prediction result in wheat production. Precision of yield estimation at field level (RMSE 0.61 t/ha) is a specific estimation method that can be modified with manual feature adjustment to select model parameters and data input. This approach is more suitable for small-scale, high-precision farm management. Choudhary et al. @choudhary2022 used GEE for efficient calculation and can quickly complete comparative testing of multiple models (RF, linear regression, decision trees). However, the model accuracy is (RMSE 0.40 t/ha) lower than traditional methods. The advantage of GEE is that it is suitable for large-scale agricultural monitoring. It is easy to analyse vegetation dynamics across seasons and over long periods of time using GEE. GEE can automate data handling processes, although it limits variable screening and manual model simulations affect accuracy, but it is suitable for large scale learning.
+Hunt et al. @hunt2019 using different combinations of data( meteorological, terrain, and soil moisture content) to improve the RF model prediction result in wheat production. Precision of yield estimation at field level (RMSE 0.61 t/ha) is a specific estimation method that can be modified with manual feature adjustment to select model parameters and data input. This approach is more suitable for small-scale, high-precision farm management. Choudhary et al. @choudhary2022 used GEE for efficient Calculation of 
+rice yield and can quickly complete comparative testing of multiple models (RF, linear regression, decision trees). However, the model accuracy is (RMSE 0.40 t/ha) lower than traditional methods. The advantage of GEE is that it is suitable for large-scale agricultural monitoring. It is easy to analyse vegetation dynamics across seasons and over long periods of time using GEE. GEE can automate data handling processes, although it limits variable screening and manual model simulations affect accuracy, but it is suitable for large scale learning.
 
 ::: grid
 ::: g-col-6

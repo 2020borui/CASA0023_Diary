@@ -151,7 +151,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Wk3_Corrections.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Enhancement</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Enhancements</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -176,6 +176,12 @@ div.csl-indent {
   <div class="sidebar-item-container"> 
   <a href="./Wk8_Clas2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification Ⅱ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Wk9_SAR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Syntactic Aperture Radar</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -241,12 +247,12 @@ div.csl-indent {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/wk6_cat.png" width="300" height="300" class="figure-img"></p>
-<figcaption>Github limitation</figcaption>
+<figcaption>Github limitation(chatgpt generated)</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>This process uses a pyramid of downsampled tiles, reducing the image to multiple scales until it reaches 256 × 256 pixels per tile. Making the processing more efficient. Here, I use the image and the example of LandSat with 30m resolution to help me understand it.</p>
+<p>Large-scale dataset storage loading process uses a pyramid of downsampled tiles, reducing the image to multiple scales until it reaches 256 × 256 pixels per tile. Making the processing more efficient. Here, I use the image and the example of LandSat with 30m resolution to help me understand it.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/pyramid.jpg" class="img-fluid figure-img"></p>
@@ -257,6 +263,7 @@ div.csl-indent {
 <div class="cell" data-escape="false">
 <div class="cell-output-display">
 <table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<caption>The differences between GEE and R</caption>
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF; font-weight: bold;">Feature</th>
@@ -324,15 +331,15 @@ div.csl-indent {
 </section>
 <section id="application" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="application"><span class="header-section-number">5.2</span> Application</h2>
-<p>I have explored what influence the data from different sensors would have on the analysis of crop yield estimation. This week, I want to focus on the impact of analyses of GEE. I conclude two articles to make comparisons, both of them using a vegetation index to set up a random forest model to predict the crop yield. But one of them used GEE to analyse, the other used traditional methods.</p>
+<p>In week one, I have explored what influence the data from different sensors would have on the analysis of crop yield estimation. This week, I want to focus on the difference of analyses of GEE. I conclude two articles to make comparisons, both of them using a vegetation index to set up a random forest model to predict the crop yield. But one of them used GEE to analyse, the other used traditional methods.</p>
 <ol type="1">
 <li>The role of GEE in data processing</li>
 </ol>
-<p>Choudhary et al. <span class="citation" data-cites="choudhary2022">Choudhary et al. (<a href="references.html#ref-choudhary2022" role="doc-biblioref">2022</a>)</span> are using GEE to remove all errors and get similar weight to tackle the data quickly. These steps help quickly access multi-temporal Sentinel-2 data and reduce the time to deal with data. But GEE data tackling may ignore the unusual weather or special local terrain, which may reduce the prediction accuracy. Hunt et al. <span class="citation" data-cites="hunt2019">Hunt et al. (<a href="references.html#ref-hunt2019" role="doc-biblioref">2019</a>)</span> did data pre-processing manually (like using a buffer to remove gaps from data cleaning), selecting a date image with fewer clouds and using a Sen2Cor processor to correct data, improving the quality of input data, so the model performances are more consistent.</p>
+<p><span class="citation" data-cites="choudhary2022">Choudhary et al. (<a href="references.html#ref-choudhary2022" role="doc-biblioref">2022</a>)</span> used GEE to remove all errors and get similar weight to tackle the data quickly. These steps help quickly access multi-temporal Sentinel-2 data and reduce the time to deal with data. But GEE data tackling may ignore the unusual weather or special local terrain, which may reduce the prediction accuracy. Hunt et al. <span class="citation" data-cites="hunt2019">Hunt et al. (<a href="references.html#ref-hunt2019" role="doc-biblioref">2019</a>)</span> did data pre-processing manually (like using a buffer to remove gaps from data cleaning), selecting a date image with fewer clouds and using a Sen2Cor processor to correct data, improving the quality of input data, so the model performances are better.</p>
 <ol start="2" type="1">
 <li>Performance of random forests in GEE and non-GEE environments</li>
 </ol>
-<p>Hunt et al. <span class="citation" data-cites="hunt2019">Hunt et al. (<a href="references.html#ref-hunt2019" role="doc-biblioref">2019</a>)</span> using different combinations of data( meteorological, terrain, and soil moisture content) to improve the RF model prediction result in wheat production. Precision of yield estimation at field level (RMSE 0.61 t/ha) is a specific estimation method that can be modified with manual feature adjustment to select model parameters and data input. This approach is more suitable for small-scale, high-precision farm management. Choudhary et al. <span class="citation" data-cites="choudhary2022">Choudhary et al. (<a href="references.html#ref-choudhary2022" role="doc-biblioref">2022</a>)</span> used GEE for efficient calculation and can quickly complete comparative testing of multiple models (RF, linear regression, decision trees). However, the model accuracy is (RMSE 0.40 t/ha) lower than traditional methods. The advantage of GEE is that it is suitable for large-scale agricultural monitoring. It is easy to analyse vegetation dynamics across seasons and over long periods of time using GEE. GEE can automate data handling processes, although it limits variable screening and manual model simulations affect accuracy, but it is suitable for large scale learning.</p>
+<p>Hunt et al. <span class="citation" data-cites="hunt2019">Hunt et al. (<a href="references.html#ref-hunt2019" role="doc-biblioref">2019</a>)</span> using different combinations of data( meteorological, terrain, and soil moisture content) to improve the RF model prediction result in wheat production. Precision of yield estimation at field level (RMSE 0.61 t/ha) is a specific estimation method that can be modified with manual feature adjustment to select model parameters and data input. This approach is more suitable for small-scale, high-precision farm management. Choudhary et al. <span class="citation" data-cites="choudhary2022">Choudhary et al. (<a href="references.html#ref-choudhary2022" role="doc-biblioref">2022</a>)</span> used GEE for efficient Calculation of rice yield and can quickly complete comparative testing of multiple models (RF, linear regression, decision trees). However, the model accuracy is (RMSE 0.40 t/ha) lower than traditional methods. The advantage of GEE is that it is suitable for large-scale agricultural monitoring. It is easy to analyse vegetation dynamics across seasons and over long periods of time using GEE. GEE can automate data handling processes, although it limits variable screening and manual model simulations affect accuracy, but it is suitable for large scale learning.</p>
 <div class="grid">
 <div class="g-col-6">
 <div class="quarto-figure quarto-figure-center">

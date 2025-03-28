@@ -7,3 +7,5 @@ Now, I am studying MSc in spatial data science. I hope to be able to analyse the
 I took this module Remotely Sensing Cities and Environments to learn more about environmental hazards arising from a changing climate. Through learning and operationalising remotely sensed Earth observation data, I hope I can provide effective recommendations for today's cities or urban planning.
 
 This diary will record my learning process throughout the module. It includes a summary of knowledge from each lesson, practical application and personal reflective thinking. I hope to be able to show what I have learnt from this module in this way.
+
+Some parts of this diary were improved with help from ChatGPT, including simpler table descriptions, grammar checks, and fixing repeated meanings.

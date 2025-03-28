@@ -147,7 +147,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Wk3_Corrections.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Enhancement</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Enhancements</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -166,6 +166,18 @@ div.csl-indent {
   <div class="sidebar-item-container"> 
   <a href="./Wk7_Clas1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification Ⅰ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Wk8_Clas2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification Ⅱ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Wk9_SAR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Syntactic Aperture Radar</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -258,18 +270,18 @@ div.csl-indent {
 <h2 data-number="4.2" class="anchored" data-anchor-id="application"><span class="header-section-number">4.2</span> Application</h2>
 <section id="data-and-model" class="level3" data-number="4.2.1">
 <h3 data-number="4.2.1" class="anchored" data-anchor-id="data-and-model"><span class="header-section-number">4.2.1</span> Data and Model</h3>
-<p>Usually, flood hazard mapping always includes two parts: the flood models (FL) and natural catastrophe (CAT) models. <span class="citation" data-cites="hirpa2021">(<a href="references.html#ref-hirpa2021" role="doc-biblioref">Hirpa et al. 2021</a>)</span> Flood models are usually hydrological models based on DEMs, channel locations, stream flow, and precipitation data. The catastrophe models always include land cover data, critical infrastructure, and building footprints extracted from LIDAR data. To support the flood information decision, New York has already drawn a series of maps to inform flood planning and Response. For example, the NYC Stormwater Flood Maps <span class="citation" data-cites="nysfloo">(<a href="references.html#ref-nysfloo" role="doc-biblioref"><span>“NYS Flood Impact Decision Support System - FIDSS,”</span> n.d.</a>)</span> shows the area’s potential flooding scenarios. New York City now makes flooding monitoring with the help of FloodNet Sensors Which are 87 Low-Cost Ultrasonic sensors, which bring more precision results.</p>
+<p>Usually, flood hazard mapping always includes two parts: the flood models (FL) and natural catastrophe (CAT) models. <span class="citation" data-cites="hirpa2021">(<a href="references.html#ref-hirpa2021" role="doc-biblioref">Hirpa et al. 2021</a>)</span> Flood models are usually based on DEMs, channel locations, stream flow, and precipitation data. The catastrophe models always include land cover data, critical infrastructure, and building footprints extracted from LIDAR data. To support the flood information decision, New York has already drawn a series of maps to inform flood planning and Response. For example, the NYC Stormwater Flood Maps <span class="citation" data-cites="nysfloo">(<a href="references.html#ref-nysfloo" role="doc-biblioref"><span>“NYS Flood Impact Decision Support System - FIDSS,”</span> n.d.</a>)</span> shows the area’s potential flooding scenarios. New York City makes flooding monitoring with the help of FloodNet Sensors Which are 87 Low-Cost Ultrasonic sensors, bring more precision results.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/rain_flooding_mapnyc.jpg" class="img-fluid figure-img" data-fig.align="center" width="500"></p>
 <figcaption>NYC Stormwater Flood Maps (Source: New York City Stormwater Flood Maps)</figcaption>
 </figure>
 </div>
-<p>Although the hydrological modelling in the local area seems to be progressively improving perfectly. Remote sensing data is still helpful in emergency response and large-scale analyses of flooding. We can get the depth and extent of the flood by Landsat series data. By computing the modified normalized difference water index (NDWI) to do water detection after floodings. <span class="citation" data-cites="cohen2019">(<a href="references.html#ref-cohen2019" role="doc-biblioref">Cohen et al. 2019</a>)</span> We can get flooded areas by comparing it with the Land Cover Dataset. However, Landsat data may be influenced by weather so can not get continuous data. SAR sensors like Sentinel-1 have a higher resolution (10m) and can detect through clouds, so it is more commonly applied to real-time flood monitoring. The flooding analyses estimate the post-to-preflood radar cross-section (RCS) ratio and exclude the double scatterers (DSs) in urban areas.<span class="citation" data-cites="mason2023">(<a href="references.html#ref-mason2023" role="doc-biblioref">Mason, Dance, and Cloke 2023</a>)</span> We can also get the depth of the flood by analysing it in relation to the high-resolution DEM data obtained from LIDAR.</p>
+<p>Although the hydrological modelling in the local area seems to be progressively improving perfectly. Remote sensing data is still helpful in emergency response and large-scale analyses of flooding. We can get the depth and extent of the flood by Landsat series data. By computing the modified normalized difference water index (NDWI) to do water detection after floodings. <span class="citation" data-cites="cohen2019">(<a href="references.html#ref-cohen2019" role="doc-biblioref">Cohen et al. 2019</a>)</span> We can get flooded areas by comparing it with the Land Cover Dataset. However, Landsat data may be influenced by weather so can not get continuous data. SAR sensors like Sentinel-1 have a higher resolution (10m) and can detect through clouds, so it is more commonly applied to real-time flood monitoring. The flooding analyses estimate the post-to-preflood radar cross-section (RCS) ratio and exclude the double scatterers (DSs) in urban areas.<span class="citation" data-cites="mason2023">(<a href="references.html#ref-mason2023" role="doc-biblioref">Mason, Dance, and Cloke 2023</a>)</span> We can also get the depth of the flood by analysing it in relation to the high-resolution DEM data obtained from LIDAR. In flood detection we can fuse sar and optical satellite imagery in pursuit of more accurate predictions.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/landsatf.png" class="img-fluid figure-img" data-fig.align="center" width="500"></p>
-<figcaption>Landsat flooding analysis</figcaption>
+<figcaption>Landsat flooding analysis. Source:<span class="citation" data-cites="cohen2019">Cohen et al. (<a href="references.html#ref-cohen2019" role="doc-biblioref">2019</a>)</span></figcaption>
 </figure>
 </div>
 <p>The Land Cover Dataset is important in The Social Vulnerability analyses. We can obtain large area land cover monitoring through optical remote sensing like Landsat, Sentinel-2, and MODIS. Using different indexes helps us detect different types of covering.</p>
@@ -278,7 +290,7 @@ div.csl-indent {
 NDBI: extracting building area.  
 
 NDWI: extracting body of water.  </code></pre>
-<p>The DEM Dataset is very important in flooding analyses. It’s very important in remote sensing and hydrological analysis. In the local area, we often use LIDAR to get 1-5m DEM data for more precise analyses. For larger study areas like cities, we can use SAR to get DEM data to simplify the dataset for ease of computation.</p>
+<p>The DEM Dataset is very important in remote sensing and hydrological analysis. In the local area, we often use LIDAR to get 1-5m DEM data for more precise analyses. For larger study areas like cities, we can use SAR to get DEM data to simplify the dataset for ease of computation.</p>
 </section>
 <section id="workflows" class="level3" data-number="4.2.2">
 <h3 data-number="4.2.2" class="anchored" data-anchor-id="workflows"><span class="header-section-number">4.2.2</span> Workflows</h3>
@@ -293,7 +305,7 @@ NDWI: extracting body of water.  </code></pre>
 </section>
 <section id="reflection" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">4.3</span> Reflection</h2>
-<p>Current NYC Flood Maps may be plots based on hydrologic models developed through hydrologic analyses. New York is a coastal city with many important rivers, the analysis will be difficult because of the different hydrological properties of sea and river water. I think using remote sensing data for analysis is simpler. Because water has the same reflective properties, and the analysis is focused on the results rather than the complex hydrological process. It is more suitable for large-scale analysis across the entire city like New York. Moreover, remote sensing enables long-term monitoring of flood impacts, providing valuable data for evaluating policy effectiveness before and after implementation. For example, New York takes many projects to protect Lower Manhattan and plots the project region and location on the map, reflecting zoning planning, which is very specific and highly instructive.Remote sensing data can provide clear changes before and after the implementation of the policy, and provide support for those projects. A Data-Driven Approach to urban planning analyses data from different scopes with different methods leading to more efficient and accurate policy delivery.</p>
+<p>Current NYC Flood Maps may be plots based on hydrologic models developed through hydrologic analyses. New York is a coastal city with many important rivers, the analysis will be difficult because of the different hydrological properties of sea and river water. I think using remote sensing data for analysis is simpler. Because water has the same reflective properties, and the analysis should focuse on the results rather than the complex hydrological process. It is more suitable for large-scale analysis across the entire city like New York. Moreover, remote sensing enables long-term monitoring of flood impacts, providing valuable data for evaluating policy effectiveness before and after implementation. For example, New York takes many projects to protect Lower Manhattan and plots the project region and location on the map, reflecting zoning planning, which is very specific and highly instructive.Remote sensing data can provide clear changes before and after the implementation of the policy, and provide support for those projects. A Data-Driven Approach to urban planning analyses data from different levels with different methods leading to more efficient and accurate policy delivery.</p>
 <p>The methods applied in New York could be adapted for other coastal cities，like Tokyo, Shanghai, which face similar climate challenges. Unlike with radar detectors or precise hydrological data, open-access satellite data (Sentinel-1, Landsat) offers a cost-effective strategy for flood risk analysis and feedback on policy effectiveness, particularly in developing country with limited resources.</p>
 
 
@@ -739,8 +751,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./Wk3_Corrections.html" class="pagination-link" aria-label="Corrections and Enhancement">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Enhancement</span></span>
+      <a href="./Wk3_Corrections.html" class="pagination-link" aria-label="Corrections and Enhancements">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Enhancements</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

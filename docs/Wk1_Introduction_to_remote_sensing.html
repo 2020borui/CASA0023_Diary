@@ -174,6 +174,18 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./Wk8_Clas2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification Ⅱ</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Wk9_SAR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Syntactic Aperture Radar</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
@@ -281,15 +293,15 @@ div.csl-indent {
 <section id="applications" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">1.2</span> Applications</h2>
 <p>I’m interested in remote sensing in vegetation monitoring. The main difference between the two sensors Landsat and Sentinel is in the various resolutions on spatial, spectral and temporal. By comparing two articles about machine learning used in vegetation monitoring, I observed that two types of data perform differently in different tasks. Sentinel data performs more accurately in predicting by regression on a small scale, the Landsat data is more accurate in classifying vegetation types over large areas.</p>
-<p>It may be due to the following reasons: Sentinel has a red edge band (B5, B6 and B7) that is more sensitive to monitoring vegetation. It also has a higher resolution of around 10M and 20M, so it has a more accurate prediction of vegetation characteristics such as trunk height for forest variables. <span class="citation" data-cites="astola2019">(<a href="references.html#ref-astola2019" role="doc-biblioref">Astola et al. 2019</a>)</span> Sentinel has a 5-day return cycle, so, it captures short-term changes in vegetation well, but it will be complicated to handle large ranges of data. As a new sensor from 2015, it may be a lack of data build-up.</p>
+<p>It may be due to the following reasons: Sentinel has a red edge band (B5, B6 and B7) that is more sensitive to monitoring vegetation. It also has a higher resolution of around 10M and 20M, so it has a more accurate prediction of vegetation characteristics such as trunk height for forest variables. <span class="citation" data-cites="astola2019">(<a href="Wk9_SAR.html#ref-astola2019" role="doc-biblioref">Astola et al. 2019</a>)</span> Sentinel has a 5-day return cycle, so, it captures short-term changes in vegetation well, but it will be complicated to handle large ranges of data. As a new sensor from 2015, it may be a lack of data build-up.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/acc.png" class="img-fluid figure-img" width="500"></p>
 <figcaption>Model accuracy for different data sources Source: Ram C. Sharma’s article</figcaption>
 </figure>
 </div>
-<p>To my surprise, Landsat data are more accurate in studies related to the classification of vegetation types by setting a random forest model. <span class="citation" data-cites="sharma2017">(<a href="references.html#ref-sharma2017" role="doc-biblioref">Sharma, Hara, and Tateishi 2017</a>)</span>Although Landsat has a 16-day return cycle, due to the length of time covered it has rich datasets and it has SWIR and thermal infrared bands, both of which can provide help for the study of large-scale classification. At the end of the article, the author got a more precise classification by combination of the two types of data.</p>
-<p>How can these methods be applied to real life? Scientists found that near-infrared radiation can observe the health of vegetation. It is based on the principle that the health status of plants will influence the plant’s spectrum of both absorption and reflection. The U.S. Department of Agriculture uses Landsat and the U.S. Geological Survey to forecast agricultural productivity in each growing season. <span class="citation" data-cites="blickensdörfer2022">(<a href="references.html#ref-blickensdörfer2022" role="doc-biblioref">Blickensdörfer et al. 2022</a>)</span>According to the comparison above, I think the result will be better to use Landsat data for large-scale farmland species identification, and then use Sentinel data to monitor small-scale changes in the growing season of a single crop.</p>
+<p>To my surprise, Landsat data are more accurate in studies related to the classification of vegetation types by setting a random forest model. <span class="citation" data-cites="sharma2017">(<a href="Wk9_SAR.html#ref-sharma2017" role="doc-biblioref">Sharma, Hara, and Tateishi 2017</a>)</span>Although Landsat has a 16-day return cycle, due to the length of time covered it has rich datasets and it has SWIR and thermal infrared bands, both of which can provide help for the study of large-scale classification. At the end of the article, the author got a more precise classification by combination of the two types of data.</p>
+<p>How can these methods be applied to real life? Scientists found that near-infrared radiation can observe the health of vegetation. It is based on the principle that the health status of plants will influence the plant’s spectrum of both absorption and reflection. The U.S. Department of Agriculture uses Landsat and the U.S. Geological Survey to forecast agricultural productivity in each growing season. <span class="citation" data-cites="blickensdörfer2022">(<a href="Wk9_SAR.html#ref-blickensdörfer2022" role="doc-biblioref">Blickensdörfer et al. 2022</a>)</span>According to the comparison above, I think the result will be better to use Landsat data for large-scale farmland species identification, and then use Sentinel data to monitor small-scale changes in the growing season of a single crop.</p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
